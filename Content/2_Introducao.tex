@@ -1,12 +1,14 @@
 \chapter{Introdução}
 \label{Introducao}
 
-\par A Língua Brasileira de Sinais (Libras) é reconhecida oficialmente desde 2002 por meio da lei Nº 10.436. Este marco representa um grande avanço para a comunidade surda, que possuem agora uma língua própria e direitos garantidos por lei, como expresso nos artigos 2º, 3º e 4º das obrigações do governo em divundir a Libras e garantir o atendimento e tratamento à comunidade surda~\cite{Benassi}. Segundo o Portal Brasil, são mais de 9,7 milhões de surdos no país porém a acessibilidade para essas pessoas ainda é um desafio devido a falta de intérpretes~\cite{PortalBrasil}
+\par A Língua Brasileira de Sinais (Libras) é reconhecida oficialmente desde 2002 por meio da lei Nº 10.436 (regulamentada pelo decreto N°5.626 de 2005). Este marco representa um grande avanço para a comunidade surda, que possuem agora uma língua própria e direitos garantidos por lei, como expresso nos artigos 2º, 3º e 4º das obrigações do governo em divundir a Libras e garantir o atendimento e tratamento à comunidade surda~\cite{Benassi}.
+\par Segundo o Portal Brasil, existem mais de 9,7 milhões de surdos no país (dados do Censo de 2010), no entanto, a acessibilidade para essas pessoas ainda é um desafio devido a falta de intérpretes~\cite{PortalBrasil}. No intuito de diminuir as barreiras de comunicação, vários aplicativos tem surgido com a proposta de traduzir sites, textos e até mesmo voz para a Libras, como é o caso do ProDeaf e do Hand Talk apenas para citar alguns. No entanto, o processo inverso de tradução, ou seja, de Libras para o português, não é uma funcionalidade muito comum nestes aplicativos.
+\par Na tentativa de criar uma interface entre surdos e ouvintes, busca-se neste trabalho desenvolver um aplicativo capaz de reconhecer gestos em Libras. Para este trabalho, o foco será dado na interpretação de sinais estáticos, mais especificamente na identificação dos números.
+% (em junho de 2017, foi lançado o projeto Giulia para Android, o primeiro aplicativo com esta funcionalidade para Libras).
 
-\par No intúito de diminuir essas barreiras de comunicação, vários aplicativos tem surgido com a proposta de traduzir sites, textos e até mesmo voz para a Libras, como é o caso do ProDeaf e do Hand Talk apenas para citar alguns. O processo inverso de tradução, ou seja, de Libras para o português, no entanto, não é uma funcionalidade muito comum nestes aplicativos (em junho de 2017, foi lançado o projeto Giulia para Android, o primeiro aplicativo com esta funcionalidade para Libras).
 %Introdução do trabalho.
 % 
-%Na redação da monografia, que é parte importantíssima do projeto, pois é aquela que ficará pública, precisamos definir muito bem o título, construir um Resumo com todas as partes de um Resumo, esclarecer o(s) objetivo(s) e construir uma conclusão completa, tudo isso quase que ao mesmo tempo, pois o trabalho já terminou.
+%\par Na redação da monografia, que é parte importantíssima do projeto, pois é aquela que ficará pública, precisamos definir muito bem o título, construir um Resumo com todas as partes de um Resumo, esclarecer o(s) objetivo(s) e construir uma conclusão completa, tudo isso quase que ao mesmo tempo, pois o trabalho já terminou.
 %A Introdução deve conter um histórico (com muitas referências atuais-procure nas bases consagradas, como por exemplo IEEE, para apresentar não só referências voláteis-aquelas da Internet) do assunto apontando a origem e os avanços que estão publicados, ressaltando o "foco" de ataque do projeto.
 %Depois, compor um bom Embasamento Teórico citando as referências de onde está o assunto todo de cada tópico (sem se confundir com a apresentação dos materiais usados no projeto), pois é o lugar onde estarão presentes as partes da ciência ou as técnicas de forma geral que foram utilizadas para construir a solução (exemplo: Sistemas Embarcados é um tópico e não Raspberry Pi, Linux Embarcado é um tópico e não a distribuição escolhida, porém Linux é um subtópico de Sistemas Operacionais). Depois mostrar Material e Métodos, ou Desenvolvimento do Projeto, mostrando logo na entrada do capítulo uma figura ou diagrama que apresente de forma geral como as partes estão relacionadas/conectadas. Mostrar os algoritmos da solução em forma de fluxogramas ou usando UML, de maneira clara e completa. Se for necessário apresentar trechos de código para ressaltar soluções ou apresentar abordagens, também que seja de forma direta e simplificada. Códigos completos deverão estar nos Apêndices para a Monografia final, depois da defesa.  
 %Assim, consegue-se mostrar o quanto você evoluiu com os aprendizados do curso e com aqueles que você buscou a mais, e o quanto tem de solução legal e atual na sua proposta. 
@@ -27,24 +29,22 @@
 % 	\label{logo}
 % \end{figure}
 
-
-
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 \section{Motivação}
 
-Descrever a motivação do trabalho.
+\par É vasta a quantidade de estudos envolvendo o reconhecimento de gestos aplicadas à línguas de sinais. Também é vasta a coleção de aplicativos disponíveis para traduzir o português para Libras. No entanto, sistemas capazes de fazer o processo inverso de tradução e que estão disponíveis à sociedade ainda são escassos.
+\par A grande motivação do trabalho é atuar de forma a fornecer ferramentas para que um usuário de Libras possa interagir com pessoas que não tem conhecimento da língua de sinais.
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\section{Objetivo}
+
+\par Este trabalho tem como objetivo principal o desenvolvimento de um sistema para interpretação de sinais em Libras, fornecendo uma resposta textual ao sinal identificado. 
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
-\section{Objetivo(s)}
+\section {Justificativa}
 
-Somente o(s) Objetivo(s) do trabalho.
-
-
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
-\section {Justificativas/relevância}
-
-Justificativa do trabalho.
+ 
+\par O trabalho se justifica por atuar de forma a buscar alternativas à falta de intérpretes disponíveis aos usuários de Libras, não com o intuito de substituí-los, mas na tentativa de aumentar a autonomia de pessoas surdas.
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %

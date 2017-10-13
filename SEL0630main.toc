@@ -1,8 +1,8 @@
 \select@language {brazil}
 \contentsline {chapter}{\numberline {1}Introdu\c c\~ao}{15}{chapter.1}
 \contentsline {section}{\numberline {1.1}Motiva\c c\~ao}{15}{section.1.1}
-\contentsline {section}{\numberline {1.2}Objetivo(s)}{15}{section.1.2}
-\contentsline {section}{\numberline {1.3}Justificativas/relev\^ancia}{15}{section.1.3}
+\contentsline {section}{\numberline {1.2}Objetivo}{16}{section.1.2}
+\contentsline {section}{\numberline {1.3}Justificativa}{16}{section.1.3}
 \contentsline {section}{\numberline {1.4}Organiza\c c\~ao do Trabalho}{16}{section.1.4}
 \contentsline {chapter}{\numberline {2}Embasamento Te\'orico ou Fundamenta\c c\~ao Te\'orica}{17}{chapter.2}
 \contentsline {chapter}{\numberline {3}Material e M\'etodos ou Desenvolvimento do Projeto}{19}{chapter.3}
