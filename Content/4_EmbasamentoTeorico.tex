@@ -1,7 +1,63 @@
-\chapter{Embasamento Teórico ou Fundamentação Teórica}
+\chapter{Fundamentação Teórica}
 \label{EmbasamentoTeorico}
 
+\section{Segmentação}
 
+\par Ao se capturar uma imagem para processamento, é muitas vezes conveniente separar regiões de interesse, eliminando elementos alheios. Para este projeto, estamos interessados em obter uma imagem das mãos com o maior nível de detalhe possível.
+
+\par Na tentativa de isolar as mãos em uma imagem foram adotadas 3 técnicas:
+
+\begin{itemize}
+\item Detecção de pele
+\item Detecção de bordas
+\item Detecção de face
+\end{itemize}
+
+\subsection{Detecção de Pele}
+
+\par Uma técnica utilizada para detecção de pele é a baseada em cores, ou seja, é considerada pele todos os pixels que estão dentro de uma faixa de cores. Matematicamente, seja a imagem F(x,y) e dois limitantes $\tau 1$ e $\tau 2$, a detecção de pele é feita conforme a equação~\ref{eq:deteccao_pele}.
+
+\begin{equation}
+\label{eq:deteccao_pele}
+F(x,y) = \begin{cases} F(x,y), & \mbox{se $\tau 1$ > F(x,y) > $\tau 2$}  \\ 0, & \mbox{caso contrário}\end{cases}
+\end{equation}
+
+\par Nos trabalhos consultados, não houve unanimidade quanto à melhor opção de espaço de cores para detecção de pele. Em~\cite{Barros}, é utilizado o espaço de cores YCbCr, o mesmo utilizado por~\cite{Yeo}. Em~\cite{Wen} é utilizado o espaço de cores YUV enquanto~\cite{Chen} faz o reconhecimento de pele no espaço RGB. 
+\par Experimentalmente, o melhor resultado foi obtido com o uso do espaço de cor HSV, como feito por~\cite{Rosebrock}, que também aponta as limitações do uso da técnica baseada em cores devido a grande variação de tonalidade de peles.
+
+\subsection{Detecção de Borda} 
+
+\par A detecção de borda realça os limites das regiões, baseando-se na variação de luminosidade~\cite{Pavan}. Este processo se mostra necessário pois realiza a binarização da imagem, evidenciando o elemento de interesse (mãos) e diminuindo a quantidade de características presentes na imagem, o que facilita a classificação posteriormente~\cite{Pavan}.
+
+%\par Por facilidade, foram utilizadas funções prontas da biblioteca \textit{OpenCV} para realizar a detecção de bordas.
+
+\subsection{Detecção de Face}
+
+\par A detecção de face é uma técnica que visa identificar a existência ou não de uma face humana na imagem. Difere do reconhecimento de face, já que não se deseja identificar a pessoa, mas apenas identificar que existe uma pessoa (face).
+\par Uma vez que se deseja isolar as mãos, é preciso fazer a identificação e a remoção da face, já que a detecção de pele destaca estas duas regiões~\cite{Yeo}.
+
+\par Estas 3 etapas mostradas constituem uma fase de pré-processamento da imagem, com o intuito de identificar e isolar as mãos do ambiente. 
+
+\section{Classificação}
+
+\par Para fazer o reconhecimento das imagens é preciso fazer uso de um sistema de classificação. Este sistema faz a identificação da imagem com base em um conjunto de treinamento previamente fornecido.
+\par Vários são os métodos para fazer a classificação. Em~\cite{Barros} é utilizado máquina de vetores de suporte ou SVM \textit{(Support Vector Machine}); classificador de Bayes é utilizado em~\cite{Wen} e em~\cite{Chen} utiliza-se Modelo oculto de Markov. Para simplificar o desenvolvimento, no entanto, foi adotado um classificador simples para este projeto, o k-NN (k-nearest neighbors).
+
+\subsection{Classificador k-NN}
+
+\par O classificador k-NN verifica qual a distância do elemento de entrada para cada elemento no conjunto treinado e classifica o elemento de entrada baseado nos k elementos mais próximos.
+
+%Os limites utilizados para fazer a detecção foram:
+%
+%\begin{equation*}
+%	103 < H < 180
+%\end{equation*}
+%\begin{equation*}
+%	0 < S < 100
+%\end{equation*}
+%\begin{equation*}
+%	100 < V < 255
+%\end{equation*}
 
 
 

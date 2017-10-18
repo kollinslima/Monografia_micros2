@@ -6,10 +6,35 @@ Claudio~Alves Benassi.
 
 \bibitem{PortalBrasil}
 Portal~Brasil (Org.).
-\newblock Apesar de avan\c{c}os, surdos ainda enfrentam barreiras de
+\newblock Apesar de avancos, surdos ainda enfrentam barreiras de
   acessibilidade.
-\newblock Dispon\'{i}vel em:
+\newblock Disponível em:
   \url{<http://www.brasil.gov.br/cidadania-e-justica/2016/09/apesar-de-avancos-surdos-ainda-enfrentam-barreiras-de-acessibilidade>}.
   Acesso em: 08 out. 2017, 2016.
+
+\bibitem{Barros}
+João D. S.~Almeida Ruberth A. A.~Barros, Aitan V.~Pontes.
+\newblock Reconhecimento de linguagem de sinais: aplicação em libras, 2014.
+
+\bibitem{Yeo}
+Hyotaek~Lim Hui-Shyong~Yeo, Byung-Gook~Lee.
+\newblock Hand tracking and gesture recognition system for human-computer
+  interaction using low-cost hardware, 2013.
+
+\bibitem{Wen}
+Yanyu~Niu Xiaotang~Wen.
+\newblock A method for hand gesture recognition based on morphology and
+  fingertipangle, 2010.
+
+\bibitem{Chen}
+Chung-Lin~Huang Feng-Sheng~Chen, Chih-Ming~Fu.
+\newblock Hand gesture recognition using a real-time tracking method and hidden
+  markov models, 2003.
+
+\bibitem{Rosebrock}
+Adrian Rosebrock.
+
+\bibitem{Pavan}
+
 
 \end{thebibliography}
