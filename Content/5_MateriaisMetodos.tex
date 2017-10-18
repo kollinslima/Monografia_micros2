@@ -5,7 +5,6 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 \section{Material}
 
-Material utilizado no projeto.
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
@@ -16,9 +15,30 @@ Material utilizado no projeto.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.2\textwidth]{./Resources/procedimento.png}
-	\caption{Metodologia adotada.}
+	\caption{Método utilizado.}
 	\label{fig:processo}
 \end{figure}
 
+\subsection{Captura da Imagem}
 
+\par A captura da imagem é feita pela câmera do aparelho Android. Não foi imposta nenhuma restrição quanto às características da câmera para este projeto.
+
+\subsection{Pré-Processamento}
+
+\par O pré-processamento é realizado com auxílio da biblioteca \textit{OpenCV} e consiste em tratar a imagem capturada pela câmera de modo isolar as características desejadas (neste caso, busca-se isolar a região das mãos).
+
+\par O processo de pré-processamento é mostrado na figura~\ref{fig:pre_proc}. São realizadas 3 etapas de maneira independente:
+
+\begin{itemize}
+	\item Detecção de bordas: feita por meio da função \textit{Imgproc.Canny}. 
+	\item Detecção de face: utiliza o \textit{CascadeClassifier} da biblioteca \textit{OpenCV} para fazer a detecção da região quadrada que contém uma face. Esta região é então preenchida (preto) de modo a eliminar a face da imagem.
+	\item Detecção de pele: 
+\end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{./Resources/pre_processamento.png}
+	\caption{Pré-Processamento aplicado.}
+	\label{fig:pre_proc}
+\end{figure}
 

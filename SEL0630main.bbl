@@ -33,8 +33,16 @@ Chung-Lin~Huang Feng-Sheng~Chen, Chih-Ming~Fu.
 
 \bibitem{Rosebrock}
 Adrian Rosebrock.
+\newblock Skin detection: A step-by-step example using python and opencv.
+\newblock Disponível em:
+  \url{<https://www.pyimagesearch.com/2014/08/18/skin-detection-step-step-example-using-python-opencv/>}.
+  Acesso em: 15 out. 2017, 2014.
 
 \bibitem{Pavan}
 
+
+\bibitem{Rossi}
+Solange Oliveira~Rezende Rafael Geraldeli~Rossi.
+\newblock Aprendendo com os vizinhos, 2017.
 
 \end{thebibliography}

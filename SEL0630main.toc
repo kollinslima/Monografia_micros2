@@ -14,6 +14,8 @@
 \contentsline {chapter}{\numberline {3}Material e M\'etodos ou Desenvolvimento do Projeto}{19}{chapter.3}
 \contentsline {section}{\numberline {3.1}Material}{19}{section.3.1}
 \contentsline {section}{\numberline {3.2}M\'etodos}{19}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Captura da Imagem}{20}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Pr\'e-Processamento}{20}{subsection.3.2.2}
 \contentsline {chapter}{\numberline {4}Resultados e Discuss\~oes}{21}{chapter.4}
 \contentsline {chapter}{\numberline {5}Conclus\~ao ou Conclus\~oes}{23}{chapter.5}
 \contentsline {chapter}{Refer\^encias}{23}{section*.4}

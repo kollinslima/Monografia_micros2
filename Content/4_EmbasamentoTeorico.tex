@@ -34,7 +34,7 @@ F(x,y) = \begin{cases} F(x,y), & \mbox{se $\tau 1$ > F(x,y) > $\tau 2$}  \\ 0, &
 \subsection{Detecção de Face}
 
 \par A detecção de face é uma técnica que visa identificar a existência ou não de uma face humana na imagem. Difere do reconhecimento de face, já que não se deseja identificar a pessoa, mas apenas identificar que existe uma pessoa (face).
-\par Uma vez que se deseja isolar as mãos, é preciso fazer a identificação e a remoção da face, já que a detecção de pele destaca estas duas regiões~\cite{Yeo}.
+\par Uma vez que se deseja isolar as mãos, é preciso fazer a identificação e a remoção da face, já que a detecção de pele destaca estas duas regiões~\cite{Yeo}. 
 
 \par Estas 3 etapas mostradas constituem uma fase de pré-processamento da imagem, com o intuito de identificar e isolar as mãos do ambiente. 
 
@@ -45,7 +45,54 @@ F(x,y) = \begin{cases} F(x,y), & \mbox{se $\tau 1$ > F(x,y) > $\tau 2$}  \\ 0, &
 
 \subsection{Classificador k-NN}
 
-\par O classificador k-NN verifica qual a distância do elemento de entrada para cada elemento no conjunto treinado e classifica o elemento de entrada baseado nos k elementos mais próximos.
+\par O classificador k-NN (\textit{k-Nearest Neighbors}) verifica a distância do elemento de entrada para cada elemento no conjunto de treinamento e faz a classificação baseado nos k elementos mais próximos. A medida de distância deve ser definida com base nos elementos a serem classificados.
+\par O k-NN suporta naturalmente uma aprendizagem incremental e utiliza uma abordagem \textit{lazy}, ou seja, o algoritmo de aprendizagem retém informações de treinamento e apenas constroi um modelo ao receber uma entrada a ser classificada~\cite{Rossi}.
+%\par Como exemplo, considere a tabela~\ref{tab:knn_exemplo} que relaciona uma entrada numérica à uma cor. Suponha que ela represente um conjunto de treinamento.
+%
+%\begin{table}[H]
+%	\centering
+%	\caption{Exemplo de características}
+%	\label{tab:knn_exemplo}
+%	\begin{tabular}{|c|c|}
+%		\hline
+%		\textbf{Número} & \textbf{Cor} \\ \hline
+%		10 & Azul \\ \hline
+%		21 & Vermelho \\ \hline
+%		12 & Azul \\ \hline
+%		20 & Vermelho \\ \hline
+%	\end{tabular}
+%\end{table}
+%
+%\par Se uma entrada de valor 17 for aplicada neste classificador, pode-se utilizar a distância euclidiana para comparar esta entrada com o conjunto de treinamento. A tabela~\ref{tab:ranking_knn} mostra
+%
+%\begin{equation*}
+%d1 = \sqrt{(17 - 10)^2} = 7
+%\end{equation*}
+%\begin{equation*}
+%d2 = \sqrt{(17 - 21)^2} = 4
+%\end{equation*}
+%\begin{equation*}
+%d3 = \sqrt{(17 - 12)^2} = 5
+%\end{equation*}
+%\begin{equation*}
+%d4 = \sqrt{(17 - 20)^2} = 3
+%\end{equation*}
+%
+%\begin{table}[H]
+%	\centering
+%	\caption{Ranking dos vizinhos mais próximos.}
+%	\label{tab:ranking_knn}
+%	\begin{tabular}{|c|c|}
+%		\hline
+%		\textbf{Número} & \textbf{Cor} \\ \hline
+%		10 & Azul \\ \hline
+%		21 & Vermelho \\ \hline
+%		12 & Azul \\ \hline
+%		20 & Vermelho \\ \hline
+%	\end{tabular}
+%\end{table}
+%
+%\par Para k=3 (considerando 3 vizinhos mais próximos), 
 
 %Os limites utilizados para fazer a detecção foram:
 %
