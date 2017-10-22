@@ -4,7 +4,24 @@
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 \section{Material}
+\par Com a intenção de solucionar um problema do mundo real e facilitar vidas no que diz respeito à acessibilidade, de maneira a realmente otimizar de alguma forma o mundo das pessoas envolvidas, surgiu a idéia de desenvolver um sistema para que quem tenha deficiência auditiva possa se comunicar com outros que desconhecem a linguagem para surdos mudos, já que esta é pouco difundida e ensinada, trazendo desta forma melhorias para os deficientes em sua desenvoltura pessoal, vida profissional e educação, além de incentivar a aprendizagem da Libras. 
 
+\par O Projeto base tem por objetivo estruturar e desenvolver um sistema de interpretação dos números do alfabeto da Libras de 0 a 7.
+
+\par Sendo assim, o Projeto principal consiste em um aplicativo Android conectado a um sistema embarcado em uma Raspberry Pi com Raspian rodando em rede e com comunicação Web para um website para treinamento de rotinas da Linguagem. Ou seja, generalizando a divisão do projeto, tem-se os seguintes materiais envolvidos:
+
+\begin{itemize}
+	\item Aplicativo Android
+	\item Raspberry Pi
+	\item Raspian
+	\item Python
+	\item OpenCV
+	\item Smartphone (Câmera)
+	\item Materilize
+	\item 
+\end{itemize}
+
+\par O sistema e suas comunicações, em resumo, funcionam da seguinte maneira: O aplicativo Android é responsável por adquirir a imagem via câmera do \textit{Smartphone}, conta em sua implementação com OpenCV (Open Source Computer Vision Library) para interpretar as imagens, detectando bordas, pele e face, envia então essas imagens de modo simultâneo para o sistema rodando na Raspiberry
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
