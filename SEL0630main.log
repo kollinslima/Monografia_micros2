@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.18)  22 OCT 2017 14:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.18)  22 OCT 2017 15:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -867,16 +867,16 @@ Package babel Info: Redefining portuges shorthand "|
 \openout5 = `SEL0630main.lof'.
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 85.
+(babel)             in language  on input line 84.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 85.
+(babel)             in language  on input line 84.
  [7
 
 ]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 85.
+(babel)             in language  on input line 84.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 85.
+(babel)             in language  on input line 84.
  [8
 
 ] (./SEL0630main.lot)
@@ -884,30 +884,33 @@ Package babel Info: Redefining portuges shorthand "|
 \openout6 = `SEL0630main.lot'.
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 88.
+(babel)             in language  on input line 87.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 88.
+(babel)             in language  on input line 87.
  [9]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 88.
+(babel)             in language  on input line 87.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 88.
+(babel)             in language  on input line 87.
 
 [10
 
 ]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 110.
+(babel)             in language  on input line 109.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 110.
+(babel)             in language  on input line 109.
  [11]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 110.
+(babel)             in language  on input line 109.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 110.
+(babel)             in language  on input line 109.
  [12
 
 ] (./SEL0630main.toc
+Underfull \vbox (badness 2126) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -915,9 +918,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 24.
+(babel)             in language  on input line 23.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 24.
+(babel)             in language  on input line 23.
 [13
 
 ])
@@ -939,8 +942,6 @@ Package babel Info: Redefining portuges shorthand "|
 Cap\'{\i }tulo 1.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 37.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -952,16 +953,18 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 43.
+(babel)             in language  on input line 37.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 43.
+(babel)             in language  on input line 37.
 [15
 
 ]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 43.
+(babel)             in language  on input line 42.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 50.
+(babel)             in language  on input line 48.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 55.
 ) (./Content/4_EmbasamentoTeorico.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1038,7 +1041,7 @@ Package babel Info: Redefining portuges shorthand "|
 ]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 28.
- <./Resources/procedimento.png, id=261, 121.45375pt x 332.24126pt>
+ <./Resources/procedimento.png, id=258, 121.45375pt x 332.24126pt>
 File: ./Resources/procedimento.png Graphic file (type png)
 
 <use ./Resources/procedimento.png>
@@ -1060,7 +1063,7 @@ Package babel Info: Redefining portuges shorthand "|
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 46.
 [20 <./Resources/procedimento.png>]
-<./Resources/pre_processamento.png, id=269, 503.8825pt x 413.545pt>
+<./Resources/pre_processamento.png, id=266, 503.8825pt x 413.545pt>
 File: ./Resources/pre_processamento.png Graphic file (type png)
 
 <use ./Resources/pre_processamento.png>
@@ -1150,13 +1153,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
 [26
 
-]
-Underfull \hbox (badness 1320) in paragraph at lines 35--40
-[]\T1/ptm/m/n/10.95 Adrian Ro-se-brock.  Skin de-tec-tion: A step-by-step exam-
-ple using python and opencv.
- []
-
-)
+])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -1379,15 +1376,9 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 113.
  (./SEL0630main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 113.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 113.
+Package rerunfilecheck Info: File `SEL0630main.out' has not changed.
+(rerunfilecheck)             Checksum: 76241F15F6507E1D80EEA38E2EEA0120;1799.
 
-
-Package rerunfilecheck Warning: File `SEL0630main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `SEL0630main.out':
-(rerunfilecheck)             Before: D891AF307AD02988DC147B436253E682;1861
-(rerunfilecheck)             After:  76241F15F6507E1D80EEA38E2EEA0120;1799.
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1395,28 +1386,25 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 113.
  ) 
 Here is how much of TeX's memory you used:
  17755 strings out of 493029
- 284280 string characters out of 6136233
- 392932 words of memory out of 5000000
+ 284277 string characters out of 6136233
+ 392962 words of memory out of 5000000
  20852 multiletter control sequences out of 15000+600000
  53800 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  36i,12n,68p,1082b,521s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{section.1.4} has been referenced but does not exi
-st, replaced by a fixed one
-
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
-w/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf
--dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on SEL0630main.pdf (39 pages, 141220 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/us
+yr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on SEL0630main.pdf (39 pages, 144594 bytes).
 PDF statistics:
- 416 PDF objects out of 1000 (max. 8388607)
- 358 compressed objects within 4 object streams
+ 415 PDF objects out of 1000 (max. 8388607)
+ 357 compressed objects within 4 object streams
  80 named destinations out of 1000 (max. 500000)
- 227 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 219 words of extra memory for PDF output out of 10000 (max. 10000000)
 

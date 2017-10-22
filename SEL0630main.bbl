@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{Benassi}
 Claudio~Alves Benassi.
@@ -11,6 +11,14 @@ Portal~Brasil (Org.).
 \newblock Disponível em:
   \url{<http://www.brasil.gov.br/cidadania-e-justica/2016/09/apesar-de-avancos-surdos-ainda-enfrentam-barreiras-de-acessibilidade>}.
   Acesso em: 08 out. 2017, 2016.
+
+\bibitem{Teodoro}
+Luciano A.~Digiampietri Beatriz~Teodoro.
+\newblock Desenvolvimento de um sistema de reconhecimento automático de
+  língua brasileira de sinais.
+\newblock Disponível em:
+  \url{http://www.each.usp.br/digiampietri/bibtex/TeodoroEDigiampietri2014a.pdf}.
+  Acesso em: 22 out. 2017, 2014.
 
 \bibitem{Barros}
 João D. S.~Almeida Ruberth A. A.~Barros, Aitan V.~Pontes.
