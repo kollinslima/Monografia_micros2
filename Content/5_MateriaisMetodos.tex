@@ -1,61 +1,64 @@
-\chapter{Material e MÈtodos ou Desenvolvimento do Projeto}
+\chapter{Material e M√©todos ou Desenvolvimento do Projeto}
 \label{Material}
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 \section{Material}
-\par Com a intenÁ„o de solucionar um problema do mundo real e facilitar vidas no que diz respeito ‡ acessibilidade, de maneira a realmente otimizar de alguma forma o mundo das pessoas envolvidas, surgiu a idÈia de desenvolver um sistema para que quem tenha deficiÍncia auditiva possa se comunicar com outros que desconhecem a linguagem para surdos mudos, j· que esta È pouco difundida e ensinada, trazendo desta forma melhorias para os deficientes em sua desenvoltura pessoal, vida profissional e educaÁ„o, alÈm de incentivar a aprendizagem da Libras. 
+\par Com a inten√ß√£o de solucionar um problema do mundo real e facilitar vidas no que diz respeito √† acessibilidade, de maneira a realmente otimizar de alguma forma o mundo das pessoas envolvidas, surgiu a id√©ia de desenvolver um sistema para que quem tenha defici√™ncia auditiva possa se comunicar com outros que desconhecem a linguagem para surdos mudos, j√° que esta √© pouco difundida e ensinada, trazendo desta forma melhorias para os deficientes em sua desenvoltura pessoal, vida profissional e educa√ß√£o, al√©m de incentivar a aprendizagem da Libras. 
 
-\par O Projeto base tem por objetivo estruturar e desenvolver um sistema de interpretaÁ„o dos n˙meros do alfabeto da Libras de 0 a 7.
+\par O Projeto base tem por objetivo estruturar e desenvolver um sistema de interpreta√ß√£o dos n√∫meros do alfabeto da Libras de 0 a 7.
 
-\par Sendo assim, o Projeto principal consiste em um aplicativo Android conectado a um sistema embarcado em uma Raspberry Pi com Raspian rodando em rede e com comunicaÁ„o Web para um website para treinamento de rotinas da Linguagem. Ou seja, generalizando a divis„o do projeto, tem-se os seguintes materiais envolvidos:
+\par Sendo assim, o Projeto principal consiste em um aplicativo Android conectado a um sistema embarcado em uma Raspberry Pi com Raspian rodando em rede e com comunica√ß√£o Web para um website para treinamento de rotinas da Linguagem. Ou seja, generalizando a divis√£o do projeto, tem-se os seguintes materiais envolvidos:
 
 \begin{itemize}
-	\item Aplicativo Android
-	\item Raspberry Pi
-	\item Raspian
-	\item Python
-	\item OpenCV
-	\item Smartphone (C‚mera)
-	\item Materilize
-	\item 
+	\item Android Studio: Para a cria√ß√£o do aplicativo, o qual processa as imagens da c√¢mera do Smartphone para transferi-l√°s √† Raspberry e aparecendo conocmitantemente no website implementado 
+
+	\item Raspberry Pi: Pequeno microcomputador, embarcado com uma distribui√ß√£o Linux e programado para as necessidades do projeto de interpretar a linguagem de Libras.
+	\item Raspian: Distrubui√ß√£o variante do Debian do Linux baseada na arquitetura ARM do hardware da Raspberry Pi.
+	\item Python: Linguagem de programa√ß√£o interpretada de alto n√≠vel utilizada durante toda execu√ß√£o do projeto, tanto para rotinas internas de classifica√ß√£o, quanto para cria√ß√£o do website.
+    \item Flask: Framework pequena e poderosa para Python utilizada na cria√ß√£o do sistema Web.
+	\item OpenCV: Significando Open Source Computer Vision Library, √© uma biblioteca multiplataforma utilizada no aplicativo Android afim de processar as imagens obtidas na c√¢mera.
+	
+	\item Materilize: Framework FRont-End com uma interface gr√°fica mais agrad√°vel, utilizada em nosso sistema web de treinamento de s√≠mbolos.
+	\item MongoDB: Modelo de banco de dados NoSQL que facilita sua crian√ß√£o, servindo como armazenamento das imagens dos s√≠mbolos das Libras para posteriores compara√ß√µes e classifica√ß√µes.
+    
 \end{itemize}
 
-\par O sistema e suas comunicaÁıes, em resumo, funcionam da seguinte maneira: O aplicativo Android È respons·vel por adquirir a imagem via c‚mera do \textit{Smartphone}, conta em sua implementaÁ„o com OpenCV (Open Source Computer Vision Library) para interpretar as imagens, detectando bordas, pele e face, envia ent„o essas imagens de modo simult‚neo para o sistema rodando na Raspiberry
+\par O sistema e suas comunica√ß√µes, em resumo, funcionam da seguinte maneira: O aplicativo Android √© respons√°vel por adquirir a imagem via c√¢mera do \textit{Smartphone}, conta em sua implementa√ß√£o com OpenCV (Open Source Computer Vision Library) para interpretar as imagens, detectando bordas, pele e face, envia ent√£o essas imagens de modo simult√¢neo para o sistema rodando na Raspiberry
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
-\section{MÈtodos}
+\section{M√©todos}
 
 \par A metodologia utilizada para realizar este trabalho baseia-se nas metodologias utilizadas em~\cite{Barros},~\cite{Yeo} e~\cite{Chen}. Basicamente o processo se divide conforme mostra a figura~\ref{fig:processo}.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.2\textwidth]{./Resources/procedimento.png}
-	\caption{MÈtodo utilizado.}
+	\caption{M√©todo utilizado.}
 	\label{fig:processo}
 \end{figure}
 
 \subsection{Captura da Imagem}
 
-\par A captura da imagem È feita pela c‚mera do aparelho Android. N„o foi imposta nenhuma restriÁ„o quanto ‡s caracterÌsticas da c‚mera para este projeto.
+\par A captura da imagem √© feita pela c√¢mera do aparelho Android. N√£o foi imposta nenhuma restri√ß√£o quanto √†s caracter√≠sticas da c√¢mera para este projeto.
 
-\subsection{PrÈ-Processamento}
+\subsection{Pr√©-Processamento}
 
-\par O prÈ-processamento È realizado com auxÌlio da biblioteca \textit{OpenCV} e consiste em tratar a imagem capturada pela c‚mera de modo isolar as caracterÌsticas desejadas (neste caso, busca-se isolar a regi„o das m„os).
+\par O pr√©-processamento √© realizado com aux√≠lio da biblioteca \textit{OpenCV} e consiste em tratar a imagem capturada pela c√¢mera de modo isolar as caracter√≠sticas desejadas (neste caso, busca-se isolar a regi√£o das m√£os).
 
-\par O processo de prÈ-processamento È mostrado na figura~\ref{fig:pre_proc}. S„o realizadas 3 etapas de maneira independente:
+\par O processo de pr√©-processamento √© mostrado na figura~\ref{fig:pre_proc}. S√£o realizadas 3 etapas de maneira independente:
 
 \begin{itemize}
-	\item DetecÁ„o de bordas: feita por meio da funÁ„o \textit{Imgproc.Canny}. 
-	\item DetecÁ„o de face: utiliza o \textit{CascadeClassifier} da biblioteca \textit{OpenCV} para fazer a detecÁ„o da regi„o quadrada que contÈm uma face. Esta regi„o È ent„o preenchida (preto) de modo a eliminar a face da imagem.
-	\item DetecÁ„o de pele: 
+	\item Detec√ß√£o de bordas: feita por meio da fun√ß√£o \textit{Imgproc.Canny}. 
+	\item Detec√ß√£o de face: utiliza o \textit{CascadeClassifier} da biblioteca \textit{OpenCV} para fazer a detec√ß√£o da regi√£o quadrada que cont√©m uma face. Esta regi√£o √© ent√£o preenchida (preto) de modo a eliminar a face da imagem.
+	\item Detec√ß√£o de pele: 
 \end{itemize}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\textwidth]{./Resources/pre_processamento.png}
-	\caption{PrÈ-Processamento aplicado.}
+	\caption{Pr√©-Processamento aplicado.}
 	\label{fig:pre_proc}
 \end{figure}
 
