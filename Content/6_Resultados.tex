@@ -1,9 +1,25 @@
 \chapter{Resultados e Discussões}
 \label{Resultados}
 
-\section{Resultados}
+\par Os símbolos a serem classificados são mostrados na figura~\ref{fig:simbolos}.
 
+\par O sistema funciona com baixas taxas de erro quando trabalha com poucos símbolos, no entanto o processo de classificação se torna impreciso conforme a quantidade de símbolos diferentes aumenta. A figura~\ref{fig:erro} mostra a taxa de erro obtida em função da quantidade de símbolos diferentes que foram adicionados ao banco de dados.
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{./Resources/grafico_erro.png}
+	\caption{Diagrama simplificado do sistema.}
+	\label{fig:erro}
+\end{figure}
 
+\par Para realizar os testes, o banco de dados foi treinado com a mesma quantidade de exemplos para cada símbolo (3 exemplos) e foi dada como entrada a mesma quantidade de instâncias de cada símbolo (3 instâncias para cada símbolo treinado). O gráfico representa a taxa de desequilíbrio entre o esperado e o obtido.
+
+\par Como mostardo na figura~\ref{fig:erro}, acima de 2 símbolos o sistema é caótico, com baixas taxas de acerto. Esse resultado indica duas possibilidades para que o sistema não funcione como o esperado:
+\begin{enumerate}
+	\item O processo de \textit{hash} elimina muitas características da imagem de forma que diferenciar muitas imagens se torna uma tarefa complicada.
+	\item O classificador utilizado (\textit{K-NN}) não é bom o suficiente para classificar muitos símbolos.
+\end{enumerate}
+
+\par Muito embora o classificador \textit{K-NN} seja bastante simples se comparado às técnicas utilizadas nos trabalhos citados anteriormente, acredita-se que a transformação \textit{hash} seja a principal responsável pelos resultados obtidos. 
 
 

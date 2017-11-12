@@ -19,7 +19,6 @@
 \contentsline {subsection}{\numberline {3.2.3}\textit {Hash}}{24}{subsection.3.2.3}
 \contentsline {subsection}{\numberline {3.2.4}Classifica\c c\~ao}{24}{subsection.3.2.4}
 \contentsline {chapter}{\numberline {4}Resultados e Discuss\~oes}{27}{chapter.4}
-\contentsline {section}{\numberline {4.1}Resultados}{27}{section.4.1}
 \contentsline {chapter}{\numberline {5}Conclus\~ao ou Conclus\~oes}{29}{chapter.5}
 \contentsline {chapter}{Refer\^encias}{29}{section*.4}
 \contentsline {chapter}{Ap\^endices}{33}{section*.6}
