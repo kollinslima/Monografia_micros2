@@ -38,6 +38,20 @@ F(x,y) = \begin{cases} F(x,y), & \mbox{se $\tau 1$ > F(x,y) > $\tau 2$}  \\ 0, &
 
 \par Estas 3 etapas mostradas constituem uma fase de pré-processamento da imagem, com o intuito de identificar e isolar as mãos do ambiente. 
 
+\section{\textit{Hash}}
+
+\par Uma função \textit{hash} é uma função unidirecional que mapeia dados de entrada em uma faixa limitada de valores. No presente trabalho é utilizada a função \textit{hash} para mapear uma imagem em um valor numérico de 256-bits.
+
+\par Para fazer a transformação, é utilizado um algoritmo de \textit{Average Hash} seu funcionamento é descrito a seguir~\cite{Krawetz} para a criação de um \textit{hash} de 64-bits:
+
+\begin{itemize}
+	\item A imagem de entrada é reduzida à 64 pixels (8x8) de modo a eliminar detalhes e componentes de altas frequências.
+	\item Conversão para escala de cinza.
+	\item Cálculo do valor médio (nível de cinza médio).
+	\item A imagem é binarizada seguindo o critério: se o pixel estiver acima da média ele é setado (recebe 255), do contrário recebe o valor 0.
+	\item A leitura da imagem (da esquerda para direita, de cima para baixo) gera um código binário, que representa o hash desejado.
+\end{itemize}
+
 \section{Classificação}
 
 \par Para fazer o reconhecimento das imagens é preciso fazer uso de um sistema de classificação. Este sistema faz a identificação da imagem com base em um conjunto de treinamento previamente fornecido.

@@ -1,64 +1,89 @@
-\chapter{Material e MÃ©todos ou Desenvolvimento do Projeto}
-\label{Material}
+\chapter{Materiais e Métodos}
+%\label{Introducao}
+
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 \section{Material}
-\par Com a intenÃ§Ã£o de solucionar um problema do mundo real e facilitar vidas no que diz respeito Ã  acessibilidade, de maneira a realmente otimizar de alguma forma o mundo das pessoas envolvidas, surgiu a idÃ©ia de desenvolver um sistema para que quem tenha deficiÃªncia auditiva possa se comunicar com outros que desconhecem a linguagem para surdos mudos, jÃ¡ que esta Ã© pouco difundida e ensinada, trazendo desta forma melhorias para os deficientes em sua desenvoltura pessoal, vida profissional e educaÃ§Ã£o, alÃ©m de incentivar a aprendizagem da Libras. 
+\par Com a intenção de solucionar um problema do mundo real e facilitar vidas no que diz respeito à acessibilidade, de maneira a realmente otimizar de alguma forma o mundo das pessoas envolvidas, surgiu a idéia de desenvolver um sistema para que quem tenha deficiência auditiva possa se comunicar com outros que desconhecem a linguagem para surdos mudos, já que esta é pouco difundida e ensinada, trazendo desta forma melhorias para os deficientes em sua desenvoltura pessoal, vida profissional e educação, além de incentivar a aprendizagem da Libras. 
 
-\par O Projeto base tem por objetivo estruturar e desenvolver um sistema de interpretaÃ§Ã£o dos nÃºmeros do alfabeto da Libras de 0 a 7.
+\par O Projeto base tem por objetivo estruturar e desenvolver um sistema de interpretação dos números do alfabeto da Libras de 0 a 7.
 
-\par Sendo assim, o Projeto principal consiste em um aplicativo Android conectado a um sistema embarcado em uma Raspberry Pi com Raspian rodando em rede e com comunicaÃ§Ã£o Web para um website para treinamento de rotinas da Linguagem. Ou seja, generalizando a divisÃ£o do projeto, tem-se os seguintes materiais envolvidos:
+\par Sendo assim, o Projeto principal consiste em um aplicativo Android conectado a um sistema embarcado em uma Raspberry Pi com Raspian rodando em rede e com comunicação Web para um website para treinamento de rotinas da Linguagem. Ou seja, generalizando a divisão do projeto, tem-se os seguintes materiais envolvidos:
 
 \begin{itemize}
-	\item Android Studio: Para a criaÃ§Ã£o do aplicativo, o qual processa as imagens da cÃ¢mera do Smartphone para transferi-lÃ¡s Ã  Raspberry e aparecendo conocmitantemente no website implementado 
-
-	\item Raspberry Pi: Pequeno microcomputador, embarcado com uma distribuiÃ§Ã£o Linux e programado para as necessidades do projeto de interpretar a linguagem de Libras.
-	\item Raspian: DistrubuiÃ§Ã£o variante do Debian do Linux baseada na arquitetura ARM do hardware da Raspberry Pi.
-	\item Python: Linguagem de programaÃ§Ã£o interpretada de alto nÃ­vel utilizada durante toda execuÃ§Ã£o do projeto, tanto para rotinas internas de classificaÃ§Ã£o, quanto para criaÃ§Ã£o do website.
-    \item Flask: Framework pequena e poderosa para Python utilizada na criaÃ§Ã£o do sistema Web.
-	\item OpenCV: Significando Open Source Computer Vision Library, Ã© uma biblioteca multiplataforma utilizada no aplicativo Android afim de processar as imagens obtidas na cÃ¢mera.
+	\item Android Studio: Para a criação do aplicativo, o qual processa as imagens da câmera do Smartphone para transferi-lás à Raspberry e aparecendo conocmitantemente no website implementado 
 	
-	\item Materilize: Framework FRont-End com uma interface grÃ¡fica mais agradÃ¡vel, utilizada em nosso sistema web de treinamento de sÃ­mbolos.
-	\item MongoDB: Modelo de banco de dados NoSQL que facilita sua crianÃ§Ã£o, servindo como armazenamento das imagens dos sÃ­mbolos das Libras para posteriores comparaÃ§Ãµes e classificaÃ§Ãµes.
-    
+	\item Raspberry Pi: Pequeno microcomputador, embarcado com uma distribuição Linux e programado para as necessidades do projeto de interpretar a linguagem de Libras.
+	\item Raspian: Distrubuição variante do Debian do Linux baseada na arquitetura ARM do hardware da Raspberry Pi.
+	\item Python: Linguagem de programação interpretada de alto nível utilizada durante toda execução do projeto, tanto para rotinas internas de classificação, quanto para criação do website.
+	\item Flask: Framework pequena e poderosa para Python utilizada na criação do sistema Web.
+	\item OpenCV: Significando Open Source Computer Vision Library, é uma biblioteca multiplataforma utilizada no aplicativo Android afim de processar as imagens obtidas na câmera.
+	
+	\item Materilize: Framework FRont-End com uma interface gráfica mais agradável, utilizada em nosso sistema web de treinamento de símbolos.
+	\item MongoDB: Modelo de banco de dados NoSQL que facilita sua crianção, servindo como armazenamento das imagens dos símbolos das Libras para posteriores comparações e classificações.
+	
 \end{itemize}
 
-\par O sistema e suas comunicaÃ§Ãµes, em resumo, funcionam da seguinte maneira: O aplicativo Android Ã© responsÃ¡vel por adquirir a imagem via cÃ¢mera do \textit{Smartphone}, conta em sua implementaÃ§Ã£o com OpenCV (Open Source Computer Vision Library) para interpretar as imagens, detectando bordas, pele e face, envia entÃ£o essas imagens de modo simultÃ¢neo para o sistema rodando na Raspiberry
+\par O sistema e suas comunicações, em resumo, funcionam da seguinte maneira: O aplicativo Android é responsável por adquirir a imagem via câmera do \textit{Smartphone}, conta em sua implementação com OpenCV (Open Source Computer Vision Library) para interpretar as imagens, detectando bordas, pele e face, envia então essas imagens de modo simultâneo para o sistema rodando na Raspiberry
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
-\section{MÃ©todos}
+\section{Métodos}
 
 \par A metodologia utilizada para realizar este trabalho baseia-se nas metodologias utilizadas em~\cite{Barros},~\cite{Yeo} e~\cite{Chen}. Basicamente o processo se divide conforme mostra a figura~\ref{fig:processo}.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.2\textwidth]{./Resources/procedimento.png}
-	\caption{MÃ©todo utilizado.}
+	\caption{Método utilizado.}
 	\label{fig:processo}
 \end{figure}
 
 \subsection{Captura da Imagem}
 
-\par A captura da imagem Ã© feita pela cÃ¢mera do aparelho Android. NÃ£o foi imposta nenhuma restriÃ§Ã£o quanto Ã s caracterÃ­sticas da cÃ¢mera para este projeto.
+\par A captura da imagem é feita pela câmera do aparelho Android. Não foi imposta nenhuma restrição quanto às características da câmera para este projeto.
 
-\subsection{PrÃ©-Processamento}
+\subsection{Pré-Processamento}
 
-\par O prÃ©-processamento Ã© realizado com auxÃ­lio da biblioteca \textit{OpenCV} e consiste em tratar a imagem capturada pela cÃ¢mera de modo isolar as caracterÃ­sticas desejadas (neste caso, busca-se isolar a regiÃ£o das mÃ£os).
+\par O pré-processamento é realizado com auxílio da biblioteca \textit{OpenCV} e consiste em tratar a imagem capturada pela câmera de modo isolar as características desejadas (neste caso, busca-se isolar a região das mãos).
 
-\par O processo de prÃ©-processamento Ã© mostrado na figura~\ref{fig:pre_proc}. SÃ£o realizadas 3 etapas de maneira independente:
+\par O processo de pré-processamento é mostrado na figura~\ref{fig:pre_proc}. São realizadas 3 etapas de maneira independente:
 
 \begin{itemize}
-	\item DetecÃ§Ã£o de bordas: feita por meio da funÃ§Ã£o \textit{Imgproc.Canny}. 
-	\item DetecÃ§Ã£o de face: utiliza o \textit{CascadeClassifier} da biblioteca \textit{OpenCV} para fazer a detecÃ§Ã£o da regiÃ£o quadrada que contÃ©m uma face. Esta regiÃ£o Ã© entÃ£o preenchida (preto) de modo a eliminar a face da imagem.
-	\item DetecÃ§Ã£o de pele: 
+	\item Detecção de bordas: feita por meio da função \textit{Imgproc.Canny}. 
+	\item Detecção de face: utiliza o \textit{CascadeClassifier} da biblioteca \textit{OpenCV} para fazer a detecção da região quadrada que contém uma face. Esta região é então preenchida (preto) de modo a eliminar a face da imagem.
+	\item Detecção de pele: detecta regiões dentro de uma faixa de cores (utilizando o espaço HSV). O ajuste para detecção de pele foi feito manualmente.
 \end{itemize}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\textwidth]{./Resources/pre_processamento.png}
-	\caption{PrÃ©-Processamento aplicado.}
+	\caption{Pré-Processamento aplicado.}
 	\label{fig:pre_proc}
 \end{figure}
 
+\par Ao final, o resultado dos 3 processos são combinados em uma única imagem. O resultado é uma imagem como mostrado na figura~\ref{fig:imagem_pre_proc}, onde apenas o contorno das mãos fica visível na tela. Esta é imagem é convertida para "jpg" e enviada pela rede à Raspberry onde ocorrerá a segunda parte do processo.
+
+\subsection{\textit{Hash}}
+
+\par A imagem recebida passa pelo processo de \textit{Average Hash}, disponibilizado pela biblioteca \textit{ImageHash} do Python. Este processo é feito para facilitar a comparação das imagens pois, ao final do processo, as imagens serão representadas por números, que podem ser facilmente armazenadas na base de dados e comparada com operações aritméticas simples.
+
+\par Experimentalmente, chegou-se ao valor de 256-bits para o tamanho do \textit{hash}, abaixo deste valor não era possível diferenciar as imagens com o classificador utilizado.
+
+\subsection{Classificação}
+
+\par Por meio da interface web desenvolvida, é possível visualizar cada imagem recebida pela Raspberry e fazer o treinamento do banco de dados relacionando a imagem visualizada ao seu número correspondente.
+
+\par Ao mesmo tempo, em segundo plano, o classificador \textit{K-NN} executa continuamente a classificação de cada imagem recebida. Foram utilizados os 3 resultados melhores classificados (3 vizinhos). Este valor também foi decidido experimentalmente de forma a não consumir muito tempo no processo de classificação.
+
+\par Antes de enviar o resultado novamente ao Android, foi aplicado um \textit{threshold} buscando diminuir a taxa de erro. Desta forma, cada novo resultado obtido do classificador só é enviado pela rede como resultado final se for, pelo menos, 10\% diferente do resultado enviado anteriormente. O valor de 10\% foi obtido verificando como o classificador se comporta quando não há mudança no símbolo de entrada(qual o erro nesta condição).
+
+\par A imagem~\ref{fig:diagrama_completo} apresenta um diagrama simplificado do funcionamento do sistema como um todo.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{./Resources/diagrama_completo_micros2.png}
+	\caption{Diagrama simplificado do sistema.}
+	\label{fig:diagrama_completo}
+\end{figure}
