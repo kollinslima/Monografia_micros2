@@ -29,12 +29,27 @@ F(x,y) = \begin{cases} F(x,y), & \mbox{se $\tau 1$ > F(x,y) > $\tau 2$}  \\ 0, &
 
 \par A detecção de borda realça os limites das regiões, baseando-se na variação de luminosidade~\cite{Pavan}. Este processo se mostra necessário pois realiza a binarização da imagem, evidenciando o elemento de interesse (mãos) e diminuindo a quantidade de características presentes na imagem, o que facilita a classificação posteriormente~\cite{Pavan}.
 
+\par Existe diversos algoritmos que fazem a detecção de borda, tais como Operador Roberts, Sobel, Prewitt, etc. Segundo~\cite{Grassi}, as etapas básicas para fazer a detecção de borda são:
+\begin{itemize}
+	\item Suavização dos ruídos: nesta etapa, busca-se eliminar a maior quantidade de ruído possível, tomando o cuidado para não destruir as bordas.
+	\item Ressaltar Bordas: aplica-se um filtro que realça posição das bordas.
+	\item Localizar Bordas: decidir, entre as regiões destacadas, onde existe uma borda efetivamente (eliminação de falsos-positivos).
+\end{itemize}
+
 %\par Por facilidade, foram utilizadas funções prontas da biblioteca \textit{OpenCV} para realizar a detecção de bordas.
 
 \subsection{Detecção de Face}
 
 \par A detecção de face é uma técnica que visa identificar a existência ou não de uma face humana na imagem. Difere do reconhecimento de face, já que não se deseja identificar a pessoa, mas apenas identificar que existe uma pessoa (face).
 \par Uma vez que se deseja isolar as mãos, é preciso fazer a identificação e a remoção da face, já que a detecção de pele destaca estas duas regiões~\cite{Yeo}. 
+\par Para fazer a detecção de faces, o método utilizado pelo \textit{OpenCV} é a classificação em cascata. Este método recebe um arquivo de características pré-treinado e faz a classificação da imagem com base em diversas características. A face só é detectada se for aprovada ao longo da cascata de classificação, conforme mostra a figura~\ref{fig:cascata_classificacao}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{./Resources/classificador_cascata.png}
+	\caption{Processo de classificação em cascata para detecção de face.}
+	\label{fig:cascata_classificacao}
+\end{figure}
 
 \par Estas 3 etapas mostradas constituem uma fase de pré-processamento da imagem, com o intuito de identificar e isolar as mãos do ambiente. 
 
@@ -61,64 +76,53 @@ F(x,y) = \begin{cases} F(x,y), & \mbox{se $\tau 1$ > F(x,y) > $\tau 2$}  \\ 0, &
 
 \par O classificador k-NN (\textit{k-Nearest Neighbors}) verifica a distância do elemento de entrada para cada elemento no conjunto de treinamento e faz a classificação baseado nos k elementos mais próximos. A medida de distância deve ser definida com base nos elementos a serem classificados.
 \par O k-NN suporta naturalmente uma aprendizagem incremental e utiliza uma abordagem \textit{lazy}, ou seja, o algoritmo de aprendizagem retém informações de treinamento e apenas constroi um modelo ao receber uma entrada a ser classificada~\cite{Rossi}.
-%\par Como exemplo, considere a tabela~\ref{tab:knn_exemplo} que relaciona uma entrada numérica à uma cor. Suponha que ela represente um conjunto de treinamento.
-%
-%\begin{table}[H]
-%	\centering
-%	\caption{Exemplo de características}
-%	\label{tab:knn_exemplo}
-%	\begin{tabular}{|c|c|}
-%		\hline
-%		\textbf{Número} & \textbf{Cor} \\ \hline
-%		10 & Azul \\ \hline
-%		21 & Vermelho \\ \hline
-%		12 & Azul \\ \hline
-%		20 & Vermelho \\ \hline
-%	\end{tabular}
-%\end{table}
-%
-%\par Se uma entrada de valor 17 for aplicada neste classificador, pode-se utilizar a distância euclidiana para comparar esta entrada com o conjunto de treinamento. A tabela~\ref{tab:ranking_knn} mostra
-%
-%\begin{equation*}
-%d1 = \sqrt{(17 - 10)^2} = 7
-%\end{equation*}
-%\begin{equation*}
-%d2 = \sqrt{(17 - 21)^2} = 4
-%\end{equation*}
-%\begin{equation*}
-%d3 = \sqrt{(17 - 12)^2} = 5
-%\end{equation*}
-%\begin{equation*}
-%d4 = \sqrt{(17 - 20)^2} = 3
-%\end{equation*}
-%
-%\begin{table}[H]
-%	\centering
-%	\caption{Ranking dos vizinhos mais próximos.}
-%	\label{tab:ranking_knn}
-%	\begin{tabular}{|c|c|}
-%		\hline
-%		\textbf{Número} & \textbf{Cor} \\ \hline
-%		10 & Azul \\ \hline
-%		21 & Vermelho \\ \hline
-%		12 & Azul \\ \hline
-%		20 & Vermelho \\ \hline
-%	\end{tabular}
-%\end{table}
-%
-%\par Para k=3 (considerando 3 vizinhos mais próximos), 
+\par Para entender o processo de classificação, considere a tabela~\ref{tab:knn_exemplo} que relaciona uma entrada numérica à uma cor. Suponha que ela represente um conjunto de treinamento.
 
-%Os limites utilizados para fazer a detecção foram:
-%
-%\begin{equation*}
-%	103 < H < 180
-%\end{equation*}
-%\begin{equation*}
-%	0 < S < 100
-%\end{equation*}
-%\begin{equation*}
-%	100 < V < 255
-%\end{equation*}
+\begin{table}[H]
+	\centering
+	\caption{Exemplo de características}
+	\label{tab:knn_exemplo}
+	\begin{tabular}{|c|c|}
+		\hline
+		\textbf{Número} & \textbf{Cor} \\ \hline
+		10 & Azul \\ \hline
+		21 & Vermelho \\ \hline
+		12 & Azul \\ \hline
+		20 & Vermelho \\ \hline
+	\end{tabular}
+\end{table}
+
+\par Se uma entrada de valor 17 for aplicada neste classificador, pode-se utilizar a distância euclidiana para comparar esta entrada com o conjunto de treinamento.
+
+\begin{equation*}
+d1 = \sqrt{(17 - 10)^2} = 7
+\end{equation*}
+\begin{equation*}
+d2 = \sqrt{(17 - 21)^2} = 4
+\end{equation*}
+\begin{equation*}
+d3 = \sqrt{(17 - 12)^2} = 5
+\end{equation*}
+\begin{equation*}
+d4 = \sqrt{(17 - 20)^2} = 3
+\end{equation*}
+
+\par Para k=3 (considerando 3 vizinhos mais próximos), devemos considerar apenas as 3 menores distâncias (d4,d2 e d3). Atribui-se uma pontuação à cada um dos vizinhos, que deve ser maior quanto menor for a distância, conforme mostra a tabela~\ref{tab:ranking_knn}.
+
+\begin{table}[H]
+	\centering
+	\caption{Ranking dos vizinhos mais próximos}
+	\label{tab:ranking_knn}
+	\begin{tabular}{|c|c|}
+		\hline
+		\textbf{Pontuação (1/d)} & \textbf{Cor} \\ \hline
+		1/3 & Vermelho \\ \hline
+		1/4 & Vermelho \\ \hline
+		1/5 & Azul \\ \hline		
+	\end{tabular}
+\end{table}
+
+\par Por fim, verifica-se qual elemento (cor) possui a maior pontuação. Neste caso, a cor vermelha é a cor mais bem pontuada e portanto o classificador escolhe esta cor como resultado.
 
 
 

@@ -3,28 +3,21 @@
 \contentsline {section}{\numberline {1.1}Objetivo}{16}{section.1.1}
 \contentsline {section}{\numberline {1.2}Justificativa}{16}{section.1.2}
 \contentsline {section}{\numberline {1.3}Organiza\c c\~ao do Trabalho}{16}{section.1.3}
-\contentsline {chapter}{\numberline {2}Fundamenta\c c\~ao Te\'orica}{17}{chapter.2}
-\contentsline {section}{\numberline {2.1}Segmenta\c c\~ao}{17}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Detec\c c\~ao de Pele}{17}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Detec\c c\~ao de Borda}{18}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}Detec\c c\~ao de Face}{18}{subsection.2.1.3}
-\contentsline {section}{\numberline {2.2}\textit {Hash}}{18}{section.2.2}
-\contentsline {section}{\numberline {2.3}Classifica\c c\~ao}{19}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Classificador k-NN}{19}{subsection.2.3.1}
-\contentsline {chapter}{\numberline {3}Materiais e M\'etodos}{21}{chapter.3}
-\contentsline {section}{\numberline {3.1}Material}{21}{section.3.1}
-\contentsline {section}{\numberline {3.2}M\'etodos}{22}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Captura da Imagem}{23}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Pr\'e-Processamento}{23}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}\textit {Hash}}{24}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Classifica\c c\~ao}{24}{subsection.3.2.4}
-\contentsline {chapter}{\numberline {4}Resultados e Discuss\~oes}{27}{chapter.4}
-\contentsline {chapter}{\numberline {5}Conclus\~ao ou Conclus\~oes}{31}{chapter.5}
-\contentsline {chapter}{Refer\^encias}{31}{section*.4}
-\contentsline {chapter}{Ap\^endices}{35}{section*.6}
-\contentsline {chapter}{Ap\^endice \numberline {A}Cuidados e orienta\c c\~oes para a elabora\c c\~ao de texto}{35}{Apêndice.1.A}
-\contentsline {chapter}{Ap\^endice \numberline {B}Apresenta\c c\~ao do TCC}{39}{Apêndice.1.B}
-\contentsline {chapter}{Ap\^endice \numberline {C}Monografia Parcial do TCC}{41}{Apêndice.1.C}
-\contentsline {chapter}{Anexos}{41}{Apêndice.1.C}
-\contentsline {chapter}{\numberline {I}Aquilo que n\~ao \'e de sua autoria}{43}{chapter.1}
-\contentsline {chapter}{\numberline {II}Aquilo que n\~ao \'e de sua autoria mas voc\^e julga importante colocar aqui}{45}{chapter.2}
+\contentsline {chapter}{\numberline {2}Fundamenta\c c\~ao Te\'orica}{19}{chapter.2}
+\contentsline {section}{\numberline {2.1}Segmenta\c c\~ao}{19}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Detec\c c\~ao de Pele}{19}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Detec\c c\~ao de Borda}{20}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Detec\c c\~ao de Face}{20}{subsection.2.1.3}
+\contentsline {section}{\numberline {2.2}\textit {Hash}}{21}{section.2.2}
+\contentsline {section}{\numberline {2.3}Classifica\c c\~ao}{21}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Classificador k-NN}{21}{subsection.2.3.1}
+\contentsline {chapter}{\numberline {3}Materiais e M\'etodo}{23}{chapter.3}
+\contentsline {section}{\numberline {3.1}Material}{23}{section.3.1}
+\contentsline {section}{\numberline {3.2}M\'etodo}{24}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Captura da Imagem}{24}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Pr\'e-Processamento}{24}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}\textit {Hash}}{26}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Classifica\c c\~ao}{26}{subsection.3.2.4}
+\contentsline {chapter}{\numberline {4}Resultados e Discuss\~oes}{29}{chapter.4}
+\contentsline {chapter}{\numberline {5}Conclus\~ao}{33}{chapter.5}
+\contentsline {chapter}{Refer\^encias}{33}{chapter.5}

@@ -3,52 +3,44 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: SEL0630main.aux
 The style file: unsrt.bst
 Database file #1: ./Content/References.bib
-Warning--string name "adilson" is undefined
---line 93 of file ./Content/References.bib
-I was expecting a `,' or a `}'---line 93 of file ./Content/References.bib
- :  author = adilson 
- :                   Roberto Pavan, Fábio Alexandre Caravieri Modesto",
-I'm skipping whatever remains of this entry
-Warning--all relevant fields are empty in Pavan
-You've used 11 entries,
+You've used 12 entries,
             1791 wiz_defined-function locations,
-            498 strings with 5203 characters,
-and the built_in function-call counts, 1326 in all, are:
-= -- 93
-> -- 41
+            506 strings with 5759 characters,
+and the built_in function-call counts, 1504 in all, are:
+= -- 114
+> -- 48
 < -- 0
-+ -- 21
-- -- 10
-* -- 13
-:= -- 196
-add.period$ -- 25
-call.type$ -- 11
-change.case$ -- 10
++ -- 24
+- -- 12
+* -- 14
+:= -- 233
+add.period$ -- 30
+call.type$ -- 12
+change.case$ -- 12
 chr.to.int$ -- 0
 cite$ -- 12
-duplicate$ -- 55
-empty$ -- 199
-format.name$ -- 10
-if$ -- 313
+duplicate$ -- 60
+empty$ -- 217
+format.name$ -- 12
+if$ -- 355
 int.to.chr$ -- 0
-int.to.str$ -- 11
+int.to.str$ -- 12
 missing$ -- 0
-newline$ -- 50
-num.names$ -- 10
-pop$ -- 71
+newline$ -- 57
+num.names$ -- 12
+pop$ -- 78
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 45
+skip$ -- 41
 stack$ -- 0
 substring$ -- 0
-swap$ -- 11
+swap$ -- 12
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 1
-while$ -- 10
-width$ -- 13
-write$ -- 94
-(There was 1 error message)
+warning$ -- 0
+while$ -- 12
+width$ -- 14
+write$ -- 110

@@ -1,9 +1,9 @@
 \chapter{Introdução}
 \label{Introducao}
 
-\par A Língua Brasileira de Sinais (Libras) é reconhecida oficialmente desde 2002 por meio da lei Nº 10.436 (regulamentada pelo decreto N°5.626 de 2005). Este marco representa um grande avanço para a comunidade surda, que possuem agora uma língua própria e direitos garantidos por lei, como expresso nos artigos 2º, 3º e 4º das obrigações do governo em divundir a Libras e garantir o atendimento e tratamento à comunidade surda~\cite{Benassi}.
-\par Segundo o Portal Brasil, existem mais de 9,7 milhões de surdos no país (dados do Censo de 2010), no entanto, a acessibilidade para essas pessoas ainda é um desafio devido a falta de intérpretes~\cite{PortalBrasil}. No intuito de diminuir as barreiras de comunicação, vários aplicativos tem surgido com a proposta de traduzir sites, textos e até mesmo voz para a Libras, como é o caso do ProDeaf e do Hand Talk apenas para citar alguns. No entanto, o processo inverso de tradução, ou seja, de Libras para o português, não é uma funcionalidade muito comum nestes aplicativos.
-%\par Na tentativa de criar uma interface entre surdos e ouvintes, busca-se neste trabalho desenvolver um aplicativo capaz de reconhecer gestos em Libras. Para este trabalho, o foco será dado na interpretação de sinais estáticos, mais especificamente na identificação dos números.
+\par A Língua Brasileira de Sinais (LIBRAS) é reconhecida oficialmente desde 2002 por meio da lei Nº 10.436 (regulamentada pelo decreto N°5.626 de 2005). Este marco representa um grande avanço para a comunidade surda, que possuem agora uma língua própria e direitos garantidos por lei, como expresso nos artigos 2º, 3º e 4º das obrigações do governo em divundir a LIBRAS e garantir o atendimento e tratamento à comunidade surda~\cite{Benassi}.
+\par Segundo o Portal Brasil, existem mais de 9,7 milhões de surdos no país (dados do Censo de 2010), no entanto, a acessibilidade para essas pessoas ainda é um desafio devido a falta de intérpretes~\cite{PortalBrasil}. No intuito de diminuir as barreiras de comunicação, vários aplicativos tem surgido com a proposta de traduzir sites, textos e até mesmo voz para a LIBRAS, como é o caso do \textit{ProDeaf} e do \textit{Hand Talk} apenas para citar alguns. No entanto, o processo inverso de tradução, ou seja, de LIBRAS para o português, não é uma funcionalidade muito comum nestes aplicativos.
+%\par Na tentativa de criar uma interface entre surdos e ouvintes, busca-se neste trabalho desenvolver um aplicativo capaz de reconhecer gestos em LIBRAS. Para este trabalho, o foco será dado na interpretação de sinais estáticos, mais especificamente na identificação dos números.
 
 
 %Introdução do trabalho.
@@ -32,35 +32,39 @@
 
 \par É vasta a quantidade de estudos envolvendo o reconhecimento de gestos aplicadas à línguas de sinais. Na literatura, encontramos dois métodos principais para a leitura dos sinais: abordagem visual, baseada em visão computacional, ou por meio de dispositivos eletromecânicos, utilizando luvas, sensores, etc. Embora a segunda abordagem facilite o processo de aquisição do sinal, ela requer o uso de um hardware adicional que pode ser desconfortável e custoso. A primeira abordagem, entretanto, é mais simples para uso no dia-a-dia, mas requer um maior pré-processamento para identificação e reconhecimento das mãos~\cite{Teodoro}.
 
-\par Também é vasta a coleção de aplicativos disponíveis para traduzir o português para Libras, dois grandes exemplos a serem citados são o \textit{Hand Talk} e o \textit{ProDeaf}, duas soluções nacionais premiadas internacionamente. 
+\par Também é vasta a coleção de aplicativos disponíveis para traduzir o português para LIBRAS, dois grandes exemplos a serem citados são o \textit{Hand Talk} e o \textit{ProDeaf}, duas soluções nacionais premiadas internacionamente. 
 \par No entanto, sistemas capazes de fazer o processo inverso de tradução e que estão disponíveis à sociedade ainda são escassos. Em 2016, o projeto \textit{SignAloud}, desenvolvido por Navid Azodi e Thomas Pryor, ambos estudantes da Universidade de Washington, ganharam o prêmio Lemelson, fornecido pelo Instituto de Tecnologia de Massachusetts, pelo projeto de reconhecimento da língua ASL (\textit{American Sign Language} ou Língua de Sinais Americana). O projeto é baseado em uma luva equipada com placas de arduino e acelerômetros para o reconhecimento de sinais e ainda não possui uma versão comercial. 
 \par Um projeto semelhante, apresentado em Julho de 2017 por engenheiros da Universidade da Califórnia em San Diego, é o \textit{The Language of Glove}, com a mesma proposta de reconhecimento de sinais ASL, mas utilizando um hardware de baixo custo (menos de 100 dólares, segundo os autores).
 \par Aqui no Brasil, foi lançado em junho de 2017, projeto Giulia para Android. Idealizado pelo Professor Manuel Cardoso da Ufam (Universidade Federal do Amazonas), o projeto utiliza os próprios sensores do \textit{smartphone}, que fica preso ao braço do usuário, para fazer o reconhecimento dos sinais, eliminando a necessidade de hardwares adicionais. 
-\par A grande motivação deste trabalho é atuar de forma a fornecer ferramentas para que um usuário de Libras possa interagir com pessoas que não tem conhecimento da língua de sinais. A proposta inicial é utilizar o método de visão computacional para a identificação de gestos estáticos, focando no reconhecimento dos números de 0 a 7.
+\par A grande motivação deste trabalho é atuar de forma a fornecer ferramentas para que um usuário de LIBRAS possa interagir com pessoas que não tem conhecimento da língua de sinais. A proposta inicial é utilizar o método de visão computacional para a identificação de gestos estáticos, focando no reconhecimento dos números de 0 a 7.
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 \section{Objetivo}
 
-\par Este trabalho tem como objetivo principal o desenvolvimento de um aplicativo para interpretação de sinais em Libras, fornecendo uma resposta textual ao sinal identificado. 
+\par Este trabalho tem como objetivo principal o desenvolvimento de um aplicativo para interpretação de sinais em LIBRAS, fornecendo uma resposta textual ao sinal identificado. 
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 \section {Justificativa}
 
 
-\par Eeste projeto se justifica por atuar de forma a buscar alternativas à falta de intérpretes disponíveis aos usuários de Libras, não com o intuito de substituí-los, mas na tentativa de aumentar a autonomia dos deficientes auditivos em duas tarefas diárias, e agregar valor tecnológico e inclusivo ao Brasil. 
+\par Eeste projeto se justifica por atuar de forma a buscar alternativas à falta de intérpretes disponíveis aos usuários de LIBRAS, não com o intuito de substituí-los, mas na tentativa de aumentar a autonomia dos deficientes auditivos em duas tarefas diárias, e agregar valor tecnológico e inclusivo ao Brasil. 
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 \section {Organização do Trabalho}
 
-Este trabalho está distribuído em XXX capítulos, incluindo esta introdução, dispostos conforme a descrição que segue:
+Este trabalho está distribuído em 5 capítulos, incluindo esta introdução, dispostos conforme a descrição que segue:
 
-Capítulo 2: Descreve .....................................................................................
+Capítulo 2: Contém uma base teórica dos principais conceitos envolvidos no desenvolvimento do projeto.
 
-Capítulo 3: Discorre sobre .....................................................................................
+Capítulo 3: Discorre sobre os materiais e método envolvidos.
 
-Capítulo 4: Apresenta .....................................................................................
+Capítulo 4: Apresenta os resultados obtidos, junto à discussões à respeito deles.
+
+Capítulo 5: Finaliza o trabalho concluindo à respeito dos resultados obtidos e do sistema como um todo.
+
+
 
 
 

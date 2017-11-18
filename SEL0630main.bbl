@@ -6,23 +6,24 @@ Claudio~Alves Benassi.
 
 \bibitem{PortalBrasil}
 Portal~Brasil (Org.).
-\newblock Apesar de avancos, surdos ainda enfrentam barreiras de
+\newblock Apesar de avan\c cos, surdos ainda enfrentam barreiras de
   acessibilidade.
-\newblock Disponível em:
+\newblock Dispon\'{i}vel em:
   \url{<http://www.brasil.gov.br/cidadania-e-justica/2016/09/apesar-de-avancos-surdos-ainda-enfrentam-barreiras-de-acessibilidade>}.
   Acesso em: 08 out. 2017, 2016.
 
 \bibitem{Teodoro}
 Luciano A.~Digiampietri Beatriz~Teodoro.
-\newblock Desenvolvimento de um sistema de reconhecimento automático de
-  língua brasileira de sinais.
-\newblock Disponível em:
+\newblock Desenvolvimento de um sistema de reconhecimento autom\'{a}tico de
+  l\'{i}ngua brasileira de sinais.
+\newblock Dispon\'{i}vel em:
   \url{http://www.each.usp.br/digiampietri/bibtex/TeodoroEDigiampietri2014a.pdf}.
   Acesso em: 22 out. 2017, 2014.
 
 \bibitem{Barros}
-João D. S.~Almeida Ruberth A. A.~Barros, Aitan V.~Pontes.
-\newblock Reconhecimento de linguagem de sinais: aplicação em libras, 2014.
+Jo\~{a}o D. S.~Almeida Ruberth A. A.~Barros, Aitan V.~Pontes.
+\newblock Reconhecimento de linguagem de sinais: aplica\c c\~{a}o em libras,
+  2014.
 
 \bibitem{Yeo}
 Hyotaek~Lim Hui-Shyong~Yeo, Byung-Gook~Lee.
@@ -42,22 +43,34 @@ Chung-Lin~Huang Feng-Sheng~Chen, Chih-Ming~Fu.
 \bibitem{Rosebrock}
 Adrian Rosebrock.
 \newblock Skin detection: A step-by-step example using python and opencv.
-\newblock Disponível em:
+\newblock Dispon\'{i}vel em:
   \url{<https://www.pyimagesearch.com/2014/08/18/skin-detection-step-step-example-using-python-opencv/>}.
   Acesso em: 15 out. 2017, 2014.
 
 \bibitem{Pavan}
+F\'{a}bio Alexandre Caravieri~Modesto Adilson Roberto~Pavan.
+\newblock Reconhecimento de gestos com segmenta\c c\~{a}o de imagens
+  din\^{a}micas aplicadas a libras, 2010.
 
+\bibitem{Grassi}
+Valdir~Grassi Jr.
+\newblock Processamento de imagens arquivo.
+\newblock Dispon\'{i}vel em:
+  \url{https://edisciplinas.usp.br/pluginfile.php/4145717/mod_resource/content/1/Processamento%20de%20Imagens.pdf}.
+  Acesso em: 18 nov. 2017, 2017.
 
 \bibitem{Krawetz}
 Neal Krawetz.
 \newblock Looks like it.
-\newblock Disponível em:
+\newblock Dispon\'{i}vel em:
   \url{http://www.hackerfactor.com/blog/index.php?/archives/432-Looks-Like-It.html}.
   Acesso em: 12 nov. 2017, 2011.
 
 \bibitem{Rossi}
 Solange Oliveira~Rezende Rafael Geraldeli~Rossi.
-\newblock Aprendendo com os vizinhos, 2017.
+\newblock Aprendendo com os vizinhos.
+\newblock Dispon\'{i}vel em:
+  \url{http://java.icmc.usp.br/moodle/pluginfile.php/5331/mod_resource/content/0/S14-Aprendendo%20com%20Vizinhos.pdf}.
+  Acesso em: 18 nov. 2017, 2017.
 
 \end{thebibliography}

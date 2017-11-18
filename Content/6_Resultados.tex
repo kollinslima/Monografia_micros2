@@ -24,10 +24,19 @@
 \par Como mostardo na figura~\ref{fig:erro}, acima de 2 símbolos o sistema é caótico, com baixas taxas de acerto. Esse resultado indica duas possibilidades para que o sistema não funcione como o esperado:
 \begin{enumerate}
 	\item O processo de \textit{hash} elimina muitas características da imagem de forma que diferenciar muitas imagens se torna uma tarefa complicada.
-	\item O classificador utilizado (\textit{K-NN}) não é bom o suficiente para classificar muitos símbolos.
+	\item O classificador utilizado (\textit{k-NN}) não é bom o suficiente para classificar muitos símbolos.
 \end{enumerate}
 
-\par Muito embora o classificador \textit{K-NN} seja bastante simples se comparado às técnicas utilizadas nos trabalhos citados anteriormente, a transformação \textit{hash} é a principal responsável pelos resultados obtidos, uma vez que características importantes da imagem são descartadas neste processo.
-\par Isso ficou evidente em um segundo teste realizado com um novo conjunto de símbolos.
+\par Muito embora o classificador \textit{k-NN} seja bastante simples se comparado às técnicas utilizadas nos trabalhos citados anteriormente, a transformação \textit{hash} é a principal responsável pelos resultados obtidos, uma vez que características importantes da imagem são descartadas neste processo.
+\par Isso ficou evidente em um segundo teste realizado com um novo conjunto de símbolos, mostrados na figura~\ref{fig:novos_simbolos}. Como se pode notar, estes novos símbolos possuem um nível de detalhamento menor e exploram diferentes regiões da imagem, o que faz com que o \textit{hash} de cada imagem tenha uma maior diferença.
+
+\begin{figure}
+	\centering
+	\includegraphics[height=\textheight]{./Resources/novos_numeros.png}
+	\caption{Símbolos alternativos para o sistema de classificação.}
+	\label{fig:novos_simbolos}
+\end{figure}
+
+\par Com estes novos símbolos, obteve-se uma melhora na classificação de aproximadamente 10\% (em relação ao caso de teste com 8 símbolos). Embora essa taxa de erro ainda seja elevada (acima de 50\%), na prática pôde-se notar um sistema muito mais estável e preciso quando comparado ao caso de teste anterior.
 
 
