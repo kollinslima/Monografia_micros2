@@ -3,6 +3,13 @@
 
 \par Os símbolos a serem classificados são mostrados na figura~\ref{fig:simbolos}.
 
+\begin{figure}
+	\centering
+	\includegraphics[height=\textheight]{./Resources/Maos_numeros.png}
+	\caption{Símbolos propostos para o sistema de classificação.}
+	\label{fig:simbolos}
+\end{figure}
+
 \par O sistema funciona com baixas taxas de erro quando trabalha com poucos símbolos, no entanto o processo de classificação se torna impreciso conforme a quantidade de símbolos diferentes aumenta. A figura~\ref{fig:erro} mostra a taxa de erro obtida em função da quantidade de símbolos diferentes que foram adicionados ao banco de dados.
 
 \begin{figure}[H]
@@ -20,6 +27,7 @@
 	\item O classificador utilizado (\textit{K-NN}) não é bom o suficiente para classificar muitos símbolos.
 \end{enumerate}
 
-\par Muito embora o classificador \textit{K-NN} seja bastante simples se comparado às técnicas utilizadas nos trabalhos citados anteriormente, acredita-se que a transformação \textit{hash} seja a principal responsável pelos resultados obtidos. 
+\par Muito embora o classificador \textit{K-NN} seja bastante simples se comparado às técnicas utilizadas nos trabalhos citados anteriormente, a transformação \textit{hash} é a principal responsável pelos resultados obtidos, uma vez que características importantes da imagem são descartadas neste processo.
+\par Isso ficou evidente em um segundo teste realizado com um novo conjunto de símbolos.
 
 
