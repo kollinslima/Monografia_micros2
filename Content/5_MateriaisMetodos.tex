@@ -31,7 +31,7 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 \section{Método}
 
-\par A metodologia utilizada para realizar este trabalho baseia-se nas metodologias utilizadas em~\cite{Barros},~\cite{Yeo} e~\cite{Chen}. Basicamente o processo se divide conforme mostra a figura~\ref{fig:processo}.
+\par O método utilizada para realizar este trabalho baseia-se no que foi utilizado em~\cite{Barros},~\cite{Yeo} e~\cite{Chen}. Basicamente o processo se divide conforme mostra a figura~\ref{fig:processo}.
 
 \begin{figure}[H]
 	\centering
@@ -76,7 +76,7 @@
 
 \par A imagem recebida passa pelo processo de \textit{Average Hash}, disponibilizado pela biblioteca \textit{ImageHash} do Python. Este processo é feito para facilitar a comparação das imagens pois, ao final do processo, as imagens serão representadas por números, que podem ser facilmente armazenadas na base de dados e comparada com operações aritméticas simples.
 
-\par Experimentalmente, chegou-se ao valor de 256-bits para o tamanho do \textit{hash}, abaixo deste valor não era possível diferenciar as imagens com o classificador utilizado. A figura~\ref{fig:exemplo_hash} mostra a como o \textit{hash} atua na imagem binarizada mostarda na figura~\ref{fig:imagem_pre_proc}.
+\par Experimentalmente, chegou-se ao valor de 256-bits para o tamanho do \textit{hash}, abaixo deste valor não era possível diferenciar as imagens com o classificador utilizado. A figura~\ref{fig:exemplo_hash} mostra um exemplo de como o \textit{hash} atua na imagem binarizada mostarda na figura~\ref{fig:imagem_pre_proc}.
 
 \begin{figure}[H]
 	\centering
@@ -87,11 +87,18 @@
 
 \subsection{Classificação}
 
-\par Por meio da interface web desenvolvida, é possível visualizar cada imagem recebida pela Raspberry e fazer o treinamento do banco de dados relacionando a imagem visualizada ao seu número correspondente.
+\par Por meio da interface web desenvolvida, mostrada na figura~\ref{fig:website}, é possível visualizar cada imagem recebida pela Raspberry e fazer o treinamento do banco de dados relacionando a imagem visualizada ao seu número correspondente.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\textwidth]{./Resources/pagina_treinamento.png}
+	\caption{Página \textit{web} para treinamento do banco de dados.}
+	\label{fig:website}
+\end{figure}
 
 \par Ao mesmo tempo, em segundo plano, o classificador \textit{k-NN} executa continuamente a classificação de cada imagem recebida. Foram utilizados os 3 resultados melhores classificados (3 vizinhos). Este valor também foi decidido experimentalmente de forma a não consumir muito tempo no processo de classificação.
 
-\par Antes de enviar o resultado novamente ao Android, foi aplicado um \textit{threshold} buscando diminuir a taxa de erro. Desta forma, cada novo resultado obtido do classificador só é enviado pela rede como resultado final se for, pelo menos, 10\% diferente do resultado enviado anteriormente. O valor de 10\% foi obtido verificando como o classificador se comporta quando não há mudança no símbolo de entrada(qual o erro nesta condição).
+\par Antes de enviar o resultado novamente ao Android, foi aplicado um \textit{threshold} buscando diminuir a taxa de erro. Desta forma, cada novo resultado obtido do classificador só é enviado pela rede como resultado final se for, pelo menos, 10\% diferente do resultado enviado anteriormente. O valor de 10\% foi obtido verificando como o classificador se comporta quando não há mudança no símbolo de entrada (qual o erro nesta condição).
 
 \par A imagem~\ref{fig:diagrama_completo} apresenta um diagrama simplificado do funcionamento do sistema como um todo.
 
