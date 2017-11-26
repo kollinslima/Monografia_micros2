@@ -15,11 +15,11 @@
 
 \subsection{Detecção de Pele}
 
-\par Uma técnica utilizada para detecção de pele é a baseada em cores, ou seja, é considerada pele todos os pixels que estão dentro de uma faixa de cores. Matematicamente, seja a imagem F(x,y) e dois limitantes $\tau 1$ e $\tau 2$, a detecção de pele é feita conforme a equação~\ref{eq:deteccao_pele}.
+\par Uma técnica utilizada para detecção de pele é a baseada em cores, ou seja, é considerada pele todos os pixels que estão dentro de uma faixa de cores. Matematicamente, seja a imagem F(x,y) e dois limitantes de cor $\tau 1$ e $\tau 2$, a detecção de pele é feita conforme a equação~\ref{eq:deteccao_pele}.
 
 \begin{equation}
 \label{eq:deteccao_pele}
-F(x,y) = \begin{cases} F(x,y), & \mbox{se $\tau 1$ > F(x,y) > $\tau 2$}  \\ 0, & \mbox{caso contrário}\end{cases}
+F'(x,y) = \begin{cases} F(x,y), & \mbox{se $\tau 1$ > F(x,y) > $\tau 2$}  \\ 0, & \mbox{caso contrário}\end{cases}
 \end{equation}
 
 \par Nos trabalhos consultados, não houve unanimidade quanto à melhor opção de espaço de cores para detecção de pele. Em~\cite{Barros}, é utilizado o espaço de cores YCbCr, o mesmo utilizado por~\cite{Yeo}. Em~\cite{Wen} é utilizado o espaço de cores YUV enquanto~\cite{Chen} faz o reconhecimento de pele no espaço RGB. 
@@ -29,12 +29,12 @@ F(x,y) = \begin{cases} F(x,y), & \mbox{se $\tau 1$ > F(x,y) > $\tau 2$}  \\ 0, &
 
 \par A detecção de borda realça os limites das regiões, baseando-se na variação de luminosidade~\cite{Pavan}. Este processo se mostra necessário pois realiza a binarização da imagem, evidenciando o elemento de interesse (mãos) e diminuindo a quantidade de características presentes na imagem, o que facilita a classificação posteriormente~\cite{Pavan}.
 
-\par Existe diversos algoritmos que fazem a detecção de borda, tais como Operador Roberts, Sobel, Prewitt, etc. Segundo~\cite{Grassi}, as etapas básicas para fazer a detecção de borda são:
-\begin{itemize}
+\par Existe diversos algoritmos que fazem a detecção de borda, tais como operador Roberts, Sobel, Prewitt, etc. Segundo~\cite{Grassi}, as etapas básicas para fazer a detecção de borda são:
+\begin{enumerate}
 	\item Suavização dos ruídos: nesta etapa, busca-se eliminar a maior quantidade de ruído possível, tomando o cuidado para não destruir as bordas.
 	\item Ressaltar Bordas: aplica-se um filtro que realça posição das bordas.
 	\item Localizar Bordas: decidir, entre as regiões destacadas, onde existe uma borda efetivamente (eliminação de falsos-positivos).
-\end{itemize}
+\end{enumerate}
 
 %\par Por facilidade, foram utilizadas funções prontas da biblioteca \textit{OpenCV} para realizar a detecção de bordas.
 
@@ -42,7 +42,7 @@ F(x,y) = \begin{cases} F(x,y), & \mbox{se $\tau 1$ > F(x,y) > $\tau 2$}  \\ 0, &
 
 \par A detecção de face é uma técnica que visa identificar a existência ou não de uma face humana na imagem. Difere do reconhecimento de face, já que não se deseja identificar a pessoa, mas apenas identificar que existe uma pessoa (face).
 \par Uma vez que se deseja isolar as mãos, é preciso fazer a identificação e a remoção da face, já que a detecção de pele destaca estas duas regiões~\cite{Yeo}. 
-\par Para fazer a detecção de faces, o método utilizado pelo \textit{OpenCV} é a classificação em cascata. Este método recebe um arquivo de características pré-treinado e faz a classificação da imagem com base em diversas características. A face só é detectada se for aprovada ao longo da cascata de classificação, conforme mostra a figura~\ref{fig:cascata_classificacao}.
+\par Para fazer a detecção de faces foi utilizada a classificação em cascada fornecida pela biblioteca \textit{OpenCV}. Este método recebe um arquivo de características pré-treinado e faz a classificação da imagem com base em diversas características. A face só é detectada se for aprovada ao longo da cascata de classificação, conforme mostra a figura~\ref{fig:cascata_classificacao}.
 
 \begin{figure}[H]
 	\centering
@@ -57,20 +57,20 @@ F(x,y) = \begin{cases} F(x,y), & \mbox{se $\tau 1$ > F(x,y) > $\tau 2$}  \\ 0, &
 
 \par Uma função \textit{hash} é uma função unidirecional que mapeia dados de entrada em uma faixa limitada de valores. No presente trabalho é utilizada a função \textit{hash} para mapear uma imagem em um valor numérico de 256-bits.
 
-\par Para fazer a transformação, é utilizado um algoritmo de \textit{Average Hash} seu funcionamento é descrito a seguir~\cite{Krawetz} para a criação de um \textit{hash} de 64-bits:
+\par Para fazer a transformação, é utilizado um algoritmo de \textit{Average Hash} seu funcionamento é descrito a seguir~\cite{Krawetz}, para a criação de um \textit{hash} de 64-bits:
 
-\begin{itemize}
+\begin{enumerate}
 	\item A imagem de entrada é reduzida à 64 pixels (8x8) de modo a eliminar detalhes e componentes de altas frequências.
 	\item Conversão para escala de cinza.
 	\item Cálculo do valor médio (nível de cinza médio).
 	\item A imagem é binarizada seguindo o critério: se o pixel estiver acima da média ele é setado (recebe 255), do contrário recebe o valor 0.
-	\item A leitura da imagem (da esquerda para direita, de cima para baixo) gera um código binário, que representa o hash desejado.
-\end{itemize}
+	\item A leitura da imagem (da esquerda para direita, de cima para baixo) gera um código binário, que representa o \textit{hash} desejado.
+\end{enumerate}
 
 \section{Classificação}
 
 \par Para fazer o reconhecimento das imagens é preciso fazer uso de um sistema de classificação. Este sistema faz a identificação da imagem com base em um conjunto de treinamento previamente fornecido.
-\par Vários são os métodos para fazer a classificação. Em~\cite{Barros} é utilizado máquina de vetores de suporte ou SVM \textit{(Support Vector Machine}); classificador de Bayes é utilizado em~\cite{Wen} e em~\cite{Chen} utiliza-se Modelo oculto de Markov. Para simplificar o desenvolvimento, no entanto, foi adotado um classificador simples para este projeto, o k-NN (k-nearest neighbors).
+\par Vários são os métodos para fazer a classificação. Em~\cite{Barros} é utilizado máquina de vetores de suporte ou SVM \textit{(Support Vector Machine}); classificador de Bayes é utilizado em~\cite{Wen} e em~\cite{Chen} utiliza-se Modelo oculto de Markov. Para simplificar o desenvolvimento, no entanto, foi adotado um classificador simples para este projeto, o k-NN.
 
 \subsection{Classificador k-NN}
 
@@ -92,7 +92,7 @@ F(x,y) = \begin{cases} F(x,y), & \mbox{se $\tau 1$ > F(x,y) > $\tau 2$}  \\ 0, &
 	\end{tabular}
 \end{table}
 
-\par Se uma entrada de valor 17 for aplicada neste classificador, pode-se utilizar a distância euclidiana para comparar esta entrada com o conjunto de treinamento.
+\par Se uma entrada de valor 17 for aplicada neste classificador, pode-se utilizar como medida de distância o módulo da diferença entre os dados do conjunto de treinamento e a entrada.
 
 \begin{equation*}
 d1 = \sqrt{(17 - 10)^2} = 7
@@ -122,7 +122,7 @@ d4 = \sqrt{(17 - 20)^2} = 3
 	\end{tabular}
 \end{table}
 
-\par Por fim, verifica-se qual elemento (cor) possui a maior pontuação. Neste caso, a cor vermelha é a cor mais bem pontuada e portanto o classificador escolhe esta cor como resultado.
+\par Por fim, verifica-se qual elemento (cor) possui a maior pontuação. Neste caso, a cor vermelha é a cor mais bem pontuada considerando os 3 vizinhos e portanto o classificador escolhe esta cor como resultado.
 
 
 

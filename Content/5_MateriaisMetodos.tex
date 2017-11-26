@@ -9,19 +9,19 @@
 %
 %\par O Projeto base tem por objetivo estruturar e desenvolver um sistema de interpretação dos números do alfabeto da LIBRAS de 0 a 7.
 
-\par O Projeto principal consiste em um aplicativo Android conectado a um sistema embarcado em uma Raspberry Pi com Raspian rodando em rede e com comunicação \textit{web} para um \textit{website} para treinamento dos símbolos. Ou seja, generalizando a divisão do projeto, tem-se os seguintes materiais envolvidos:
+\par O projeto principal consiste em um aplicativo Android conectado a um sistema embarcado em uma Raspberry Pi (com Raspian) em rede e com comunicação \textit{web} para um \textit{website} para treinamento dos símbolos. Ou seja, generalizando a divisão do projeto, tem-se os seguintes materiais envolvidos:
 
 \begin{itemize}
-	\item Android Studio: para a criação do aplicativo, o qual processa as imagens da câmera do \textit{smartphone} para transferi-lás à Raspberry e aparecendo continuamente no \textit{website} implementado 
+	\item Android Studio (3.0.1): para a criação do aplicativo, o qual processa as imagens da câmera do \textit{smartphone} para transferi-las à Raspberry pi.
 	
-	\item Raspberry Pi: microcomputador embarcado, com uma distribuição Linux e programado para as necessidades do projeto.
-	\item Raspian: distrubuição variante do Debian do Linux baseada na arquitetura ARM do hardware da Raspberry Pi.
-	\item Python: linguagem de programação interpretada de alto nível utilizada durante toda execução do projeto, tanto para rotinas internas de classificação, quanto para criação do \textit{website}.
-	\item Flask: \textit{framework} leve e poderoso para Python, utilizada na criação do sistema \textit{web}.
-	\item OpenCV: significando \textit{Open Source Computer Vision Library}, é uma biblioteca multiplataforma utilizada no aplicativo Android afim de processar as imagens obtidas na câmera.
+	\item Raspberry Pi (modelo B): microcomputador embarcado, com uma distribuição Linux e programado para as necessidades do projeto.
+	\item Raspian (4.9.35): distrubuição variante do Debian do Linux baseada na arquitetura ARM do hardware da Raspberry Pi.
+	\item Python 3: linguagem de programação interpretada de alto nível utilizada durante toda execução do projeto, tanto para rotinas internas de classificação, quanto para criação do \textit{website}.
+	\item Flask (0.12.2): \textit{framework} leve e poderoso para Python, utilizada na criação do sistema \textit{web}.
+	\item OpenCV (3.3): significando \textit{Open Source Computer Vision Library}, é uma biblioteca multiplataforma utilizada no aplicativo Android afim de processar as imagens obtidas na câmera.
 	
-	\item Materilize: \textit{framework} para customização da interface \textit{web}.
-	\item MongoDB: modelo de banco de dados \textit{NoSQL}, o que facilita sua crianção, servindo como armazenamento das imagens dos símbolos para posteriores comparações e classificações.
+	\item Materilize (v0.100.2): \textit{framework} para customização da interface \textit{web}.
+	\item MongoDB (2.4.10): modelo de banco de dados \textit{NoSQL}, o que facilita sua crianção, servindo como armazenamento das imagens dos símbolos para posteriores comparações e classificações.
 	
 \end{itemize}
 
@@ -78,6 +78,13 @@
 
 \par Experimentalmente, chegou-se ao valor de 256-bits para o tamanho do \textit{hash}, abaixo deste valor não era possível diferenciar as imagens com o classificador utilizado. A figura~\ref{fig:exemplo_hash} mostra a como o \textit{hash} atua na imagem binarizada mostarda na figura~\ref{fig:imagem_pre_proc}.
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{./Resources/Hash_mao.png}
+	\caption{\textit{Hash} de 64 bits aplicado na imagem binarizada.}
+	\label{fig:exemplo_hash}
+\end{figure}
+
 \subsection{Classificação}
 
 \par Por meio da interface web desenvolvida, é possível visualizar cada imagem recebida pela Raspberry e fazer o treinamento do banco de dados relacionando a imagem visualizada ao seu número correspondente.
@@ -99,6 +106,6 @@
 \par Os códigos desenvolvidos para esta aplicação podem ser encontrados no Github.
 
 \begin{itemize}
-	\item Android: 
+	\item Android: \url{https://github.com/kollinslima/ProjetoFinal_micros2_android} 
 	\item Raspberry: \url{https://github.com/kollinslima/ProjetoFinal_micros2_rasp.git}
 \end{itemize}

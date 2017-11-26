@@ -6,7 +6,8 @@
 \contentsline {figure}{\numberline {3.1}{\ignorespaces M\'etodo utilizado.}}{24}{figure.3.1}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Etapas do pr\'e-processamento.}}{25}{figure.3.2}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Resultado do pr\'e-processamento.}}{25}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Diagrama simplificado do sistema.}}{27}{figure.3.4}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces \textit {Hash} de 64 bits aplicado na imagem binarizada.}}{26}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Diagrama simplificado do sistema.}}{27}{figure.3.5}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Diagrama simplificado do sistema.}}{29}{figure.4.2}
 \contentsline {figure}{\numberline {4.1}{\ignorespaces S\IeC {\'\i }mbolos propostos para o sistema de classifica\c c\~ao.}}{30}{figure.4.1}
