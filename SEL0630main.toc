@@ -20,4 +20,4 @@
 \contentsline {subsection}{\numberline {3.2.4}Classifica\c c\~ao}{26}{subsection.3.2.4}
 \contentsline {chapter}{\numberline {4}Resultados e Discuss\~oes}{29}{chapter.4}
 \contentsline {chapter}{\numberline {5}Conclus\~ao}{33}{chapter.5}
-\contentsline {chapter}{Refer\^encias}{33}{chapter.5}
+\contentsline {chapter}{Refer\^encias}{34}{chapter.5}
