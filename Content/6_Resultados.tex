@@ -39,3 +39,45 @@
 
 \par Com estes novos símbolos, obteve-se uma melhora na classificação de aproximadamente 10\% (em relação ao caso de teste com 8 símbolos). Embora essa taxa de erro ainda seja elevada (acima de 50\%), na prática pôde-se notar um sistema muito mais estável e preciso quando comparado ao caso de teste anterior.
 
+\newpage
+\section{Desempenho}
+
+\par Quanto ao desempenho dos sistemas, podemos observar na figura~\ref{fig:Desempenho_rasp} que a Raspberry está utilizando todo o processamento disponível para manter a interface \textit{web} e as operações de comunicação com a rede e o banco de dados.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{./Resources/Desempenho_Rasp.png}
+	\caption{Consumo de recursos pela Raspberry pi. Pode-se observar que a aplicação em python e o banco de dados MongoDB consomem praticamente 10 \% dos 434MB de memória principal disponível e quase 95 \% do poder de processamento.}
+	\label{fig:Desempenho_rasp}
+\end{figure}
+ 
+ \par Embora o consumo de processamento esteja elevado, não foi percebido problema no desempenho da aplicação (apesar do sistema ser lento na inicialização). Para o desenvolvimento na Raspberry pi, o consumo de recurso foi pensado desde o início do projeto, sendo esse o principal motivo do uso da biblioteca \textit{ImageHash} em alternativa ao \textit{OpenCV}.
+ 
+ \par Quanto ao aplicativo Android, as figuras~\ref{fig:tamanho_android},~\ref{fig:bateria_android} e~\ref{fig:cpu_android} mostram as características de desempenho referentes ao tamanho do aplicativo, consumo de bateria e consumo de recursos de CPU e memória. Para testar o sistema, foi utilizado um \textit{smartphone} ASUS ZenFone 2, com 4 núcleos de processamento (2,33GHz), 4GB de memória principal, 32GB de armazenamento, executando o Android 5.0.
+ 
+ \begin{figure}
+ 	\centering
+ 	\includegraphics[width=0.4\textwidth]{./Resources/tamanho_android}
+ 	\caption{Tamanho do aplicativo android instalado no \textit{smartphone}. Além dos 167MB consumido pelo aplicativo, é preciso mais 44,43MB de armazenamento para a instalação do \textit{OpenCV Manager}, necessário para o funcionamento do \textit{OpenCV} no android.}
+ 	\label{fig:tamanho_android}
+ \end{figure}
+ 
+  \begin{figure}
+  	\centering
+  	\includegraphics[width=0.4\textwidth]{./Resources/bateria_android}
+  	\caption{Consumo de bateria pelo aplicativo. Percebe-se um consumo elevado de bateria, o que se justifica pelas operações de processamento de imagem que estão sendo realizadas na etapa de pré-processamento.}
+  	\label{fig:bateria_android}
+  \end{figure}
+
+  \begin{figure}
+  	\centering
+  	\includegraphics[width=0.4\textwidth]{./Resources/cpu_memoria_android}
+  	\caption{Consumo de memória principal e CPU do aplicativo. O consumo de mais de 10 \% de CPU e 165MB de memória não afetaram o desempenho do aparelho, mas evidenciam um consumo grande quando comparado à outros aplicativos do sistema. (medição feita com aplicativo \textit{Simple System Monitor}.)}
+  	\label{fig:cpu_android}
+  \end{figure}
+  
+  \par O que se pode observar do aplicativo é que o processamento de imagem o tornou muito ``pesado'', fazendo-o consumir muita bateria, CPU, memória e armazenamento, tornando essa aplicação inviável para uso no dia-a-dia. 
+  
+  \par Apesar disso, provavelmente a transferência dessas tarefas para a Raspberry pi acarretaria em perda de desempenho, já que, como foi mostrado na figura~\ref{fig:Desempenho_rasp}, o sistema já trabalha praticamente à 100\% de carga. 
+  
+  \par Como solução à esse problema, provavelmente o melhor a se fazer é trocar a Raspberry pi por uma plataforma mais poderosa que possa executar com tranquilidade tanto o pré-processamento quanto o processamento em sí, ou ainda utilizar soluções em nuvem para transferir parte do trabalho a ser executado à servidores mais poderosos, podendo assim continuar com a Raspberry pi. De qualquer modo, é certo que utilizar o Android para processamento de imagem não parece ser uma solução muito efetiva quando o objetivo é criar um sistema portátil para ser usado no dia-a-dia (como é a proposta do projeto) devido, principalmente, ao consumo de bateria.

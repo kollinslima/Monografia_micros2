@@ -19,5 +19,6 @@
 \contentsline {subsection}{\numberline {3.2.3}\textit {Hash}}{26}{subsection.3.2.3}
 \contentsline {subsection}{\numberline {3.2.4}Classifica\c c\~ao}{26}{subsection.3.2.4}
 \contentsline {chapter}{\numberline {4}Resultados e Discuss\~oes}{29}{chapter.4}
-\contentsline {chapter}{\numberline {5}Conclus\~ao}{33}{chapter.5}
-\contentsline {chapter}{Refer\^encias}{34}{chapter.5}
+\contentsline {section}{\numberline {4.1}Desempenho}{33}{section.4.1}
+\contentsline {chapter}{\numberline {5}Conclus\~ao}{37}{chapter.5}
+\contentsline {chapter}{Refer\^encias}{38}{chapter.5}

@@ -13,4 +13,8 @@
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Diagrama simplificado do sistema.}}{29}{figure.4.2}
 \contentsline {figure}{\numberline {4.1}{\ignorespaces S\IeC {\'\i }mbolos propostos para o sistema de classifica\c c\~ao.}}{30}{figure.4.1}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces S\IeC {\'\i }mbolos alternativos para o sistema de classifica\c c\~ao.}}{32}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Consumo de recursos pela Raspberry pi. Pode-se observar que a aplica\c c\~ao em python e o banco de dados MongoDB consomem praticamente 10 \% dos 434MB de mem\'oria principal dispon\IeC {\'\i }vel e quase 95 \% do poder de processamento.}}{33}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Tamanho do aplicativo android instalado no \textit {smartphone}. Al\'em dos 167MB consumido pelo aplicativo, \'e preciso mais 44,43MB de armazenamento para a instala\c c\~ao do \textit {OpenCV Manager}, necess\'ario para o funcionamento do \textit {OpenCV} no android.}}{34}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Consumo de bateria pelo aplicativo. Percebe-se um consumo elevado de bateria, o que se justifica pelas opera\c c\~oes de processamento de imagem que est\~ao sendo realizadas na etapa de pr\'e-processamento.}}{35}{figure.4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Consumo de mem\'oria principal e CPU do aplicativo. O consumo de mais de 10 \% de CPU e 165MB de mem\'oria n\~ao afetaram o desempenho do aparelho, mas evidenciam um consumo grande quando comparado \`a outros aplicativos do sistema. (medi\c c\~ao feita com aplicativo \textit {Simple System Monitor}.)}}{35}{figure.4.7}
 \addvspace {10\p@ }
