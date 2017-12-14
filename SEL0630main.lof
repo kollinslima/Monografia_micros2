@@ -10,7 +10,7 @@
 \contentsline {figure}{\numberline {3.5}{\ignorespaces P\'agina \textit {web} para treinamento do banco de dados.}}{27}{figure.3.5}
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Diagrama simplificado do sistema.}}{28}{figure.3.6}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Diagrama simplificado do sistema.}}{29}{figure.4.2}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Taxa de erro ( \%) x Quantidade de s\IeC {\'\i }mbolos na base de dados}}{29}{figure.4.2}
 \contentsline {figure}{\numberline {4.1}{\ignorespaces S\IeC {\'\i }mbolos propostos para o sistema de classifica\c c\~ao.}}{30}{figure.4.1}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces S\IeC {\'\i }mbolos alternativos para o sistema de classifica\c c\~ao.}}{32}{figure.4.3}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Consumo de recursos pela Raspberry pi. Pode-se observar que a aplica\c c\~ao em python e o banco de dados MongoDB consomem praticamente 10 \% dos 434MB de mem\'oria principal dispon\IeC {\'\i }vel e quase 95 \% do poder de processamento.}}{33}{figure.4.4}

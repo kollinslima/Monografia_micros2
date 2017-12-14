@@ -29,7 +29,7 @@ F'(x,y) = \begin{cases} F(x,y), & \mbox{se $\tau 1$ > F(x,y) > $\tau 2$}  \\ 0, 
 
 \par A detecção de borda realça os limites das regiões, baseando-se na variação de luminosidade~\cite{Pavan}. Este processo se mostra necessário pois realiza a binarização da imagem, evidenciando o elemento de interesse (mãos) e diminuindo a quantidade de características presentes na imagem, o que facilita a classificação posteriormente~\cite{Pavan}.
 
-\par Existe diversos algoritmos que fazem a detecção de borda, tais como operador Roberts, Sobel, Prewitt, etc. Segundo~\cite{Grassi}, as etapas básicas para fazer a detecção de borda são:
+\par Existem diversos algoritmos que fazem a detecção de borda, tais como operador Roberts, Sobel, Prewitt, etc. Segundo~\cite{Grassi}, as etapas básicas para fazer a detecção de borda são:
 \begin{enumerate}
 	\item Suavização dos ruídos: nesta etapa, busca-se eliminar a maior quantidade de ruído possível, tomando o cuidado para não destruir as bordas.
 	\item Ressaltar Bordas: aplica-se um filtro que realça posição das bordas.
@@ -107,7 +107,7 @@ d3 = \sqrt{(17 - 12)^2} = 5
 d4 = \sqrt{(17 - 20)^2} = 3
 \end{equation*}
 
-\par Para k=3 (considerando 3 vizinhos mais próximos), devemos considerar apenas as 3 menores distâncias (d4,d2 e d3). Atribui-se uma pontuação à cada um dos vizinhos, que deve ser maior quanto menor for a distância, conforme mostra a tabela~\ref{tab:ranking_knn}.
+\par Para k=3 (considerando 3 vizinhos mais próximos), deve-se considerar apenas as 3 menores distâncias (d4,d2 e d3). Atribui-se uma pontuação à cada um dos vizinhos, que deve ser maior quanto menor for a distância, conforme mostra a tabela~\ref{tab:ranking_knn}.
 
 \begin{table}[H]
 	\centering
